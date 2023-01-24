@@ -1,0 +1,397 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    --color-title: #E39B14;
+    --color-text: #ff1d00;
+    --color-text-variant: #d4ed9d;
+    --color-body: #000120;
+    --color-section:#1D1D31;
+    --color-white: #f7f8f3;
+    --color-dark: #000000;
+    --color-item: #002c3e;
+    --color-item-variant: #78bcc4;
+
+    /*========== Font and typography ==========*/
+    --body-font: "Ubuntu", sans-serif;
+  
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --big-font-size: 3.5rem;
+    --h1-font-size: 3.0rem;
+    --h2-font-size: 2.25rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.625rem;
+  
+    /*========== Font weight ==========*/
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semi-bold: 700;
+  
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+ 
+
+    /*========== Container ==========*/
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+
+    /*========== border radius ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --border-radius-1: 1.2rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 0.5rem;
+
+    /*========== transition ==========*/
+    --transition: all 500ms ease-in-out;
+
+    /*========== transform ==========*/
+    --transform: translate(-0.3rem, -0.3rem);
+  }
+
+
+
+/*=============== BASE ===============*/
+* {
+    outline: 0;
+    padding: 0; 
+    margin: 0;
+     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+html {
+    scroll-behavior: smooth;
+ }
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+ }
+
+body {
+  background-color: var(--color-body);
+  background-image:  url(./assets/Sprinkle.svg);
+  background-size: 60rem;
+  color: var(--color-text);
+  line-height: 1.6;
+ }
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: var(--font-semi-bold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  padding-bottom: 5rem;
+  color: var(--color-title);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  color: var(--color-text-variant);
+}
+  
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  /*=============== GENERAL CONTAINER CLASS ===============*/
+
+.container{
+    width: var(--container-width-lg);
+    margin-inline: auto;
+    max-width: 1920px;
+  }
+
+  /*=============== GENERAL SECTION STYLES ===============*/
+
+section {
+    padding: 10rem 0;
+    transition: var(--transition);
+    z-index: var(--z-tooltip);
+  }
+
+section:nth-child(even) {
+    background-color: var(--color-section);
+    z-index: var(--z-tooltip);
+    background-image:  url(./assets/Sprinkle.svg);
+    background-size: 55rem;
+  } 
+
+section > h2{
+   text-align: center;
+  }
+
+section > p{
+    text-align: center;
+    margin: 0.5rem auto 4rem;
+    width: 40%;
+  }
+
+   /*=============== GENERAL BUTTON STYLES ===============*/
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display:flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 2.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-3);
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-text);
+}
+
+.btn:hover, button:hover, .dropdown-btn:hover{
+  background-color: transparent;
+  border-color: var(--color-text-variant);
+  color: var(--color-text-variant);
+  transition: var(--transition);
+  transform: var(--transform);
+}
+
+button:hover {
+  transform: none !important; 
+}
+
+.btn__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn__socials a {
+  width: 3rem;
+  font-size: 1.5rem;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  border: 1px solid transparent;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: var(--border-radius-2);
+}
+
+.btn__socials a:hover{
+  border-color: var(--color-text-variant);
+  background-color:transparent;
+  color: var(--color-text-variant);
+  transform: translate(-0.3rem, -0.3rem);
+}
+
+
+  /*=============== ANIMATION STYLES ===============*/
+      /*=========== H2 STYLES ===========*/
+.tracking-in-expand-fwd {
+	-webkit-animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+/**
+* ----------------------------------------
+* animation tracking-in-expand-fwd
+* ----------------------------------------
+*/
+@-webkit-keyframes tracking-in-expand-fwd {
+ 0% {
+   letter-spacing: -0.5em;
+   -webkit-transform: translateZ(-700px);
+           transform: translateZ(-700px);
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   -webkit-transform: translateZ(0);
+           transform: translateZ(0);
+   opacity: 1;
+ }
+}
+@keyframes tracking-in-expand-fwd {
+ 0% {
+   letter-spacing: -0.5em;
+   -webkit-transform: translateZ(-700px);
+           transform: translateZ(-700px);
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   -webkit-transform: translateZ(0);
+           transform: translateZ(0);
+   opacity: 1;
+ }
+}
+
+  /*=========== CARDS STYLES ===========*/
+
+.scale-in-center {
+	-webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+.scale-out-center {
+	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-out-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+}
+
+
+  /*=============== SCROLLBAR STYLES ===============*/
+
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: transparent;
+}
+
+
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--color-text-variant);	
+	background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+  /*=============== MEDIA QUERY ===============*/
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: var(--container-width-md);
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media screen and  (max-width: 600px) { 
+  .container{
+    width: var(--container-width-sm);
+  }
+  section {
+    margin-top: 2rem;
+  }
+ 
+}
+
