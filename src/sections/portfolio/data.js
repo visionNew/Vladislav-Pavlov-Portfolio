@@ -1,6 +1,6 @@
 
 const data= { cardData:[
-    {id: 1, title:'portfolio-h3', img_name:'project-1', target:'_blank', link_git:'https://github.com', link_dribb:'#index.html'},
+    {id: 1, title:'portfolio-h3', img_name:'project-1', target:'_blank', link_git:'https://github.com/visionNew/Vladislav-Pavlov-Portfolio', link_dribb:'#index.html'},
     {id: 2, title:'COCO Services V1',  img_name:'project-2', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-1', link_dribb:'https://dribbble.com/shots/20404584-COCO-Services-V1'},
     {id: 3, title:'COCO Services V2',  img_name:'project-3', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-2', link_dribb:'https://dribbble.com/shots/20405827-COCO-Services-V2'},
     {id: 4, title:'COCO Services V3',  img_name:'project-4', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-3', link_dribb:'https://dribbble.com/shots/20405835-COCO-Services-V3'},
