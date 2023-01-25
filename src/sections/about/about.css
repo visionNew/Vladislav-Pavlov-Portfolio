@@ -13,7 +13,6 @@
     border-radius: var(--border-radius-2);
 }
 
-
 .about__portrait:hover {
     border-width: 0;
 }
@@ -61,7 +60,7 @@
     font-size: 2rem;
     position: absolute;
     top: 5%;
-    right: 33%;
+    right: 34%;
     background: transparent;
     color: var(--color-item);
 }
@@ -89,7 +88,7 @@
 
     .popup__body > button {
         top: 5%;
-        right: 5%;
+        right: 4%;
     }
   }
   @media screen and  (max-width: 600px) { 

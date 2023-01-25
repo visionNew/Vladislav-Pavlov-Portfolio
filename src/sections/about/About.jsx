@@ -13,7 +13,6 @@ const About = () => {
       const [isOpen, setIsOpen] = useState(false);
       const togglePopup = () => { setIsOpen(!isOpen); }
       const closePopup =() => { setIsOpen(false)}
-
   
   return (
     <section id="about">
@@ -40,9 +39,9 @@ const About = () => {
                 <div>
                   {
                     isOpen && <div className="popup__container">
-                                  <div className="popup__body scale-in-center">
+                                  <div className= "popup__body scale-in-center" >
                                       <img src={IMGCert} alt="Certificate" />
-                                      <button onClick={closePopup}><FaRegWindowClose /></button>
+                                      <button onClick = {closePopup} ><FaRegWindowClose/></button>
                                   </div>
                               </div>
                   }
