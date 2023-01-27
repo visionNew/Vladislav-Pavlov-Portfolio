@@ -33,7 +33,7 @@ const About = () => {
                 <div className="about__btns">
                   <a href={CV} download className='btn'>{t('about-btn.1')} <FaDownload /></a>
                
-                  <butto onClick={togglePopup} className='btn'>{t('about-btn.2')} <AiOutlineSafetyCertificate className='btn-icon' /></butto>  
+                  <button onClick={togglePopup} className='btn'>{t('about-btn.2')} <AiOutlineSafetyCertificate className='btn-icon' /></button>  
                 </div>
                 
                 <div>

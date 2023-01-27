@@ -1,9 +1,9 @@
-import './header.css';
+import './hero.css';
 import data from './data';
 import { useTranslation } from 'react-i18next';
 import ImgPerson from '../../assets/vp-person.png'
 
-const Header = () => {
+const Hero = () => {
   const { t } = useTranslation();
   return (
     <section id="header">
@@ -28,4 +28,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Hero

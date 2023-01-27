@@ -49,7 +49,10 @@
     },
 
     "contact-h2": "CONTACTS",
-    "contact-h5": "Vladislav Pavlov",  
+    "contact-h5": {
+            "1":"Vladislav Pavlov",
+            "2":"+359887330448"
+    },  
     "contact-btn": {
             "1": "Send a Message",
             "2": "Call me!",

@@ -1,7 +1,5 @@
 import './portfolio.css';
-
 import data from './data';
-
 import {useState,} from "react";
 import { useTranslation } from 'react-i18next';
 
@@ -10,7 +8,7 @@ const Portfolio = () => {
   const { t } = useTranslation();
   const [showMore,setShowMore] = useState(3);
   const loadMore = () =>{
-    setShowMore(showMore + showMore);
+    setShowMore(showMore + 3);
   }
 
   const slice = data.cardData.slice(0, showMore);

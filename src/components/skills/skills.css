@@ -11,9 +11,7 @@
     border-radius: var(--border-radius-2);
     border: 1px solid transparent;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
 
 .skill__card:hover {
@@ -24,8 +22,6 @@
 }
 
 .card__icon {
-    display: grid;
-    place-items: center;
     width: 60%;
     font-size: 7.5rem;
     margin: 1.5rem 0;
