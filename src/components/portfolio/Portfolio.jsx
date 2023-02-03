@@ -1,24 +1,17 @@
 import './portfolio.css';
-import data from './data';
-import {useState,} from "react";
+import { cardData } from '../../utils/data';
+import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-
 
 const Portfolio = () => {
   const { t } = useTranslation();
   const [showMore,setShowMore] = useState(3);
-  const loadMore = () =>{
-    setShowMore(showMore + 3);
-  }
-
-  const slice = data.cardData.slice(0, showMore);
-
+  const loadMore = () =>{ setShowMore(showMore + 3);}
+  const slice = cardData.slice(0, showMore);
 
   return (
     <section id="portfolio">
         <h2 className="tracking-in-expand-fwd">{t('portfolio-h2')}</h2>
-
-        
         <div className="container portfolio_container">
           <div className="portfolio_cards">
             {
@@ -36,7 +29,6 @@ const Portfolio = () => {
           </div>
          {showMore && <button onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
         </div>
-        
     </section>
   )
 }

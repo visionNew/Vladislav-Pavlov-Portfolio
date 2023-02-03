@@ -1,7 +1,7 @@
-import Logo from '../../assets/vplogo.png';
 import './footer.css';
-import data from './data';
+import { socialData } from '../../utils/data';
 import { useTranslation } from 'react-i18next';
+import Logo from '../../assets/vplogo.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -12,8 +12,8 @@ const Footer = () => {
         </a>
         <div className="btn__socials">
           {
-            data.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
-          } 
+            socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
+          }
         </div>
         <div>
             <small>&copy; {t('footer-small')}</small>

@@ -1,9 +1,8 @@
 import './contacts.css';
-import data from './data';
+import { contactData } from '../../utils/data';
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { sendEmail } from '../../services/emailServices';
-
 
 const Contacts = () => {
   const { t } = useTranslation();
@@ -19,7 +18,7 @@ const Contacts = () => {
         <div className="contact__options">
 
           {
-            data.map(item => <article className="contact__option" key={item.id}>
+            contactData.map(item => <article className="contact__option" key={item.id}>
                 {item.icon}
             <div>
                 <h4>{item.h4}</h4>

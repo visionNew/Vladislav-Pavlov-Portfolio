@@ -1,10 +1,11 @@
 import './hero.css';
-import data from './data';
+import { socialData } from '../../utils/data';
 import { useTranslation } from 'react-i18next';
 import ImgPerson from '../../assets/vp-person.png'
 
 const Hero = () => {
   const { t } = useTranslation();
+  
   return (
     <section id="header">
         <div className="container header__container">
@@ -18,7 +19,7 @@ const Hero = () => {
             </div>
             <div className="btn__socials">
               {
-                data.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
+                socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
               } 
             </div>
           </div>
