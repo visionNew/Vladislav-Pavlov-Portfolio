@@ -46,23 +46,13 @@
     left: 35%;
     top: 0%;
     right:15%;
-    bottom:30%;
-   
+    bottom:30%; 
 }
 
 .popup__body > img {
     width: 70%;
     border-radius: var(--border-radius-2);
     border: 1rem solid var(--color-item);
-}
-
-.popup__body > button {
-    font-size: 2rem;
-    position: absolute;
-    top: 5%;
-    right: 34%;
-    background: transparent;
-    color: var(--color-item);
 }
 
 @media screen and (max-width: 1024px) {
@@ -85,12 +75,8 @@
         left: 23%;
         right: 23%;
     }
-
-    .popup__body > button {
-        top: 5%;
-        right: 4%;
-    }
   }
+  
   @media screen and  (max-width: 600px) { 
 
     .about__btns {
@@ -107,10 +93,6 @@
         top: 1%;
         left: 4%;
         right: 4%;
-    }
-    .popup__body > button {
-        top: 2%;
-        right: 2%;
     }
 }
 

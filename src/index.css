@@ -193,18 +193,14 @@ section > p{
   cursor: pointer;
   color: var(--color-white);
   background-color: var(--color-text);
+  transition: var(--transition);
 }
 
 .btn:hover, button:hover, .dropdown-btn:hover{
   background-color: transparent;
   border-color: var(--color-text-variant);
   color: var(--color-text-variant);
-  transition: var(--transition);
   transform: var(--transform);
-}
-
-button:hover {
-  transform: none !important; 
 }
 
 .btn__socials {

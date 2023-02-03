@@ -36,34 +36,12 @@ nav {
     background-color: transparent;
     color: var(--color-text);
 }
+
 .nav__menu >li> a:hover {
     border-bottom: 1px solid var(--color-text-variant);
     color: var(--color-text-variant);
     transform: none;
 }
-
-
-
-
-@media screen and (max-width: 1024px) {
- 
-}
-
-@media screen and  (max-width: 600px) { 
-    .nav__menu{
-        display: none;
-    }
-    .dropdown {
-        display: block;
-    }
-}
-
-
-
-
-
-
-
 
 .translate > .btn {
     font-size: 2.5rem;
@@ -74,6 +52,7 @@ nav {
     border-radius: 0;
     border-bottom: 1px solid transparent;
 }
+
 .translate > .btn:hover {
     border-bottom: 1px solid var(--color-text-variant);
 }
@@ -81,10 +60,10 @@ nav {
 .translate {
     position: relative;
 }
+
 .translate img{
     max-width: 65%;
 }
-
 
 .translate__options {
     position: absolute;
@@ -99,6 +78,7 @@ nav {
     padding-bottom: 0.5rem;
     cursor: pointer;
 }
+
 .translate__item{
     background-color: transparent;
     border-bottom: 1px solid transparent;
@@ -112,4 +92,13 @@ nav {
     color: var(--color-text-variant);
     border-bottom: 1px solid var(--color-text-variant);
     transition: var(--transition);
+}
+
+@media screen and  (max-width: 600px) { 
+    .nav__menu{
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
 }
