@@ -13,7 +13,7 @@ import { MdOutlineEmail } from 'react-icons/md';
 
     //============== -1- NAVBAR DATA ==============
 export const navData= [
-        {id: 1, link:'#header', title:'nav.1'},
+        {id: 1, link:'#hero', title:'nav.1'},
         {id: 2, link:'#about', title:'nav.2'},
         {id: 3, link:'#skills', title:'nav.3'},
         {id: 4, link:'#portfolio', title:'nav.4'},

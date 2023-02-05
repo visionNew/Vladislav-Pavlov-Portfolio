@@ -1,3 +1,6 @@
+/*=============== ANIMATION===============*/
+@import './style/animation.css';
+
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
@@ -227,125 +230,6 @@ section > p{
   transform: translate(-0.3rem, -0.3rem);
 }
 
-
-  /*=============== ANIMATION STYLES ===============*/
-      /*=========== H2 STYLES ===========*/
-.tracking-in-expand-fwd {
-	-webkit-animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-/**
-* ----------------------------------------
-* animation tracking-in-expand-fwd
-* ----------------------------------------
-*/
-@-webkit-keyframes tracking-in-expand-fwd {
- 0% {
-   letter-spacing: -0.5em;
-   -webkit-transform: translateZ(-700px);
-           transform: translateZ(-700px);
-   opacity: 0;
- }
- 40% {
-   opacity: 0.6;
- }
- 100% {
-   -webkit-transform: translateZ(0);
-           transform: translateZ(0);
-   opacity: 1;
- }
-}
-@keyframes tracking-in-expand-fwd {
- 0% {
-   letter-spacing: -0.5em;
-   -webkit-transform: translateZ(-700px);
-           transform: translateZ(-700px);
-   opacity: 0;
- }
- 40% {
-   opacity: 0.6;
- }
- 100% {
-   -webkit-transform: translateZ(0);
-           transform: translateZ(0);
-   opacity: 1;
- }
-}
-
-  /*=========== CARDS STYLES ===========*/
-
-.scale-in-center {
-	-webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-/**
- * ----------------------------------------
- * animation scale-in-center
- * ----------------------------------------
- */
- @-webkit-keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
-  }
-  @keyframes scale-in-center {
-    0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-
-.scale-out-center {
-	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-/**
- * ----------------------------------------
- * animation scale-out-center
- * ----------------------------------------
- */
- @-webkit-keyframes scale-out-center {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-}
-@keyframes scale-out-center {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-}
-
-
   /*=============== SCROLLBAR STYLES ===============*/
 
 body::-webkit-scrollbar {
@@ -370,6 +254,74 @@ body::-webkit-scrollbar-thumb {
 											  transparent)
 }
 
+  /*=============== LOADING SPINNER STYLES ===============*/
+  .loading {
+    position: fixed;
+    width: 10rem;
+    height: 10rem;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    left:45%;
+    top:40%;
+  }
+  .loading .dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    background-color: var(--color-text);
+    border-radius: 50%;
+    top: 45%;
+    left: 40%;
+  }
+  .loading .arc {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-bottom: 3px solid var(--color-text);
+  }
+  .loading .arc:nth-child(1) {
+    animation: rotate1 1.15s linear infinite;
+    animation-delay: -0.8s;
+  }
+  .loading .arc:nth-child(2) {
+    animation: rotate2 1.15s linear infinite;
+    animation-delay: -0.4s;
+  }
+  .loading .arc:nth-child(3) {
+    animation: rotate3 1.15s linear infinite;
+    animation-delay: 0s;
+  }
+  
+  @keyframes rotate1 {
+    from {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
+    }
+    to {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
+    }
+  }
+  @keyframes rotate2 {
+    from {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
+    }
+    to {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
+    }
+  }
+  @keyframes rotate3 {
+    from {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
+    }
+    to {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
+    }
+  }
+  
+
   /*=============== MEDIA QUERY ===============*/
 
 @media screen and (max-width: 1024px) {
@@ -390,4 +342,3 @@ body::-webkit-scrollbar-thumb {
   }
  
 }
-

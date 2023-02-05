@@ -1,17 +1,17 @@
-#header {
+#hero {
     padding-top: 12rem;
     padding-bottom: 0;
     position: relative;
 }
 
-.header__container {
+.hero__container {
     display: grid;
     grid-template-columns: 48% 52%;
     gap: 7%;
     place-items: center;
 }
 
-.header__profile {
+.hero__profile {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -19,39 +19,39 @@
     padding-left: 3rem;
 }
 
-.header__profile h5 {
+.hero__profile h5 {
     margin-bottom: 0.5rem;
     word-spacing: 0.7rem;
 }
 
-.header__profile h5 > span{
+.hero__profile h5 > span{
     letter-spacing: -1px;
 }
 
-.header__profile h1 {
+.hero__profile h1 {
     margin-bottom: 2.5rem;
 }
 
-.header__profile h1 > span{
+.hero__profile h1 > span{
     color: var(--color-text-variant);
 }
 
-.header__profile p {
+.hero__profile p {
     width: 25rem;
     margin-bottom: 3.5rem;
 }
 
-.header__btn {
+.hero__btn {
     display: flex;
     gap: 1.5rem;
 }
 
-.header__profile .btn__socials {
+.hero__profile .btn__socials {
     position: absolute;
     bottom: 2%;
 }
 
-.header__container > img{
+.hero__container > img{
     background: url(../../assets/Background.png) no-repeat;
     background-size: cover;
     background-position:0 3rem;
@@ -59,42 +59,42 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #header{
+    #hero{
         margin-top: 0;
         padding-top: 10rem;
     }
-    .header__container {
+    .hero__container {
         grid-template-columns: 50% 52%;
         gap: 5%;
     }
-    .header__profile {
+    .hero__profile {
         padding-left: 0;
     }
-    .header__profile .btn__socials {
+    .hero__profile .btn__socials {
         flex-direction: column;
         left: 53%;
         bottom: 12%;
     }
   }
 @media screen and  (max-width: 600px) { 
-    .header__container {
+    .hero__container {
        display: flex;
        flex-direction: column;
        margin-top: 5rem;
     }
 
-    .header__profile {
+    .hero__profile {
         max-width: 100%;
         min-height: 35vh;
         padding-left: 0;
         align-items: center;
     }
 
-    .header__profile p {
+    .hero__profile p {
         width: 100%;
     }
 
-    .header__profile .btn__socials {
+    .hero__profile .btn__socials {
         display: none;
     }
 }

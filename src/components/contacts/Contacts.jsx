@@ -12,7 +12,7 @@ const Contacts = () => {
   
   return (
     <section id="contacts">
-      <h2 className="tracking-in-expand-fwd">{t('contact-h2')}</h2>
+      <h2>{t('contact-h2')}</h2>
 
       <div className="container contact__container">
         <div className="contact__options">

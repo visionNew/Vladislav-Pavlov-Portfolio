@@ -22,7 +22,7 @@ const About = () => {
               </div>
             </div>
             <div className="about__right">
-              <h2 className="tracking-in-expand-fwd">{t('about-h2')}</h2>
+              <h2>{t('about-h2')}</h2>
                 <p>
                   {t('about-p.1')}
                 </p>

@@ -7,17 +7,17 @@
             "5":"Contacts"
     },
 
-    "header-span": "HELLO",
+    "hero-span": "HELLO",
 
-    "header-h1": {
+    "hero-h1": {
             "1": "I'm",
             "2": "Vladislav",
             "3": "Pavlov"
     },
 
-    "header-p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    "hero-p": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 
-    "header-btn": {
+    "hero-btn": {
             "1":"Let's Talk",
             "2":"My Portfolio"
     },

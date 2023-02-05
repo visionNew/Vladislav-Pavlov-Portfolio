@@ -11,7 +11,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-        <h2 className="tracking-in-expand-fwd">{t('portfolio-h2')}</h2>
+        <h2>{t('portfolio-h2')}</h2>
         <div className="container portfolio_container">
           <div className="portfolio_cards">
             {

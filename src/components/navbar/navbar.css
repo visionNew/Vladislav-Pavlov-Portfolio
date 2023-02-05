@@ -37,7 +37,7 @@ nav {
     color: var(--color-text);
 }
 
-.nav__menu >li> a:hover {
+.nav__menu >li> a:hover, .translate > .btn:hover {
     border-bottom: 1px solid var(--color-text-variant);
     color: var(--color-text-variant);
     transform: none;
@@ -51,10 +51,6 @@ nav {
     border: 0;
     border-radius: 0;
     border-bottom: 1px solid transparent;
-}
-
-.translate > .btn:hover {
-    border-bottom: 1px solid var(--color-text-variant);
 }
 
 .translate {
@@ -92,6 +88,7 @@ nav {
     color: var(--color-text-variant);
     border-bottom: 1px solid var(--color-text-variant);
     transition: var(--transition);
+    transform: none;
 }
 
 @media screen and  (max-width: 600px) { 

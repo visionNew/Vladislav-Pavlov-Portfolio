@@ -7,15 +7,15 @@ const Hero = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="header">
-        <div className="container header__container">
-          <div className="header__profile">
-            <h5><span>-------</span> {t('header-span')}</h5>
-            <h1>{t('header-h1.1')} <span>{t('header-h1.2')}</span> {t('header-h1.3')}</h1>
-            <p>{t('header-p')}</p>
-            <div className="header__btn">
-              <a href="#contacts" className="btn">{t('header-btn.1')}</a>
-              <a href="#portfolio" className="btn">{t('header-btn.2')}</a>
+    <section id="hero">
+        <div className="container hero__container">
+          <div className="hero__profile">
+            <h5><span>-------</span> {t('hero-span')}</h5>
+            <h1>{t('hero-h1.1')} <span>{t('hero-h1.2')}</span> {t('hero-h1.3')}</h1>
+            <p>{t('hero-p')}</p>
+            <div className="hero__btn">
+              <a href="#contacts" className="btn">{t('hero-btn.1')}</a>
+              <a href="#portfolio" className="btn">{t('hero-btn.2')}</a>
             </div>
             <div className="btn__socials">
               {
@@ -23,7 +23,7 @@ const Hero = () => {
               } 
             </div>
           </div>
-          <img src={ImgPerson} alt="Header Person" />
+          <img src={ImgPerson} alt="hero Person" />
         </div>
     </section>
   )

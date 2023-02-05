@@ -1,9 +1,9 @@
 import './navbar.css';
 import { navData } from '../../utils/data';
 import Dropdown from './Dropdown';
-import { useState} from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
-import {  FaLanguage  } from 'react-icons/fa';
+import { FaLanguage } from 'react-icons/fa';
 import Logo from '../../assets/vplogo.png';
 import BGN from '../../assets/bulgaria.png';
 import USA from '../../assets/usa.png';
@@ -15,9 +15,35 @@ const Navbar = () => {
   const { i18n } = useTranslation();
 
   function handleClick(lang){ i18n.changeLanguage(lang); }
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const H2Tags = document.querySelectorAll('h2');
+      H2Tags.forEach((h2Tag) => {
+        const rect = h2Tag.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          h2Tag.classList.add('tracking-in-expand-fwd');
+        } else {
+          h2Tag.classList.remove('tracking-in-expand-fwd');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    elementRef.current.classList.add('bounce-in-top');
+  }, []);
 
   return (
-    <nav id="navbar">
+    <nav ref={elementRef} id="navbar">
       <div className="container nav__container">
         <a href="#header" className='nav__logo'>
           <img src={Logo} alt="Logo" />

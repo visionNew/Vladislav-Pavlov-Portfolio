@@ -6,8 +6,8 @@ const Skills = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="skills">
-        <h2 className="tracking-in-expand-fwd" id="bar">{t('skills-h2')}</h2>
+    <section  id="skills" className='section'>
+        <h2>{t('skills-h2')}</h2>
         <div className="container skills__container">
           {
             skillData.map(item =>
