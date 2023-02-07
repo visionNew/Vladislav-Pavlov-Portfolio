@@ -9,7 +9,7 @@ function Dropdown ({ selected, setSelected }) {
     return (
             <div className="dropdown">
                 <div className="dropdown-btn" onClick={(e) => {setIsActive(!isActive)}} >
-                    {t(selected)}
+                {t(selected || "nav.1")}
                 </div>
                 {
                     isActive && (
