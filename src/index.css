@@ -255,72 +255,71 @@ body::-webkit-scrollbar-thumb {
 }
 
   /*=============== LOADING SPINNER STYLES ===============*/
-  .loading {
-    position: fixed;
-    width: 10rem;
-    height: 10rem;
-    transform-style: preserve-3d;
-    perspective: 800px;
-    left:45%;
-    top:40%;
+.loading {
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  left:45%;
+  top:40%;
+}
+.loading .dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  background-color: var(--color-text);
+  border-radius: 50%;
+  top: 45%;
+  left: 40%;
+}
+.loading .arc {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-bottom: 3px solid var(--color-text);
+}
+.loading .arc:nth-child(1) {
+  animation: rotate1 1.15s linear infinite;
+  animation-delay: -0.8s;
+}
+.loading .arc:nth-child(2) {
+  animation: rotate2 1.15s linear infinite;
+  animation-delay: -0.4s;
+}
+.loading .arc:nth-child(3) {
+  animation: rotate3 1.15s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
   }
-  .loading .dot {
-    width: 1.2rem;
-    height: 1.2rem;
-    position: absolute;
-    background-color: var(--color-text);
-    border-radius: 50%;
-    top: 45%;
-    left: 40%;
+  to {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
   }
-  .loading .arc {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-bottom: 3px solid var(--color-text);
+}
+@keyframes rotate2 {
+  from {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
   }
-  .loading .arc:nth-child(1) {
-    animation: rotate1 1.15s linear infinite;
-    animation-delay: -0.8s;
+  to {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
   }
-  .loading .arc:nth-child(2) {
-    animation: rotate2 1.15s linear infinite;
-    animation-delay: -0.4s;
+}
+@keyframes rotate3 {
+  from {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
   }
-  .loading .arc:nth-child(3) {
-    animation: rotate3 1.15s linear infinite;
-    animation-delay: 0s;
+  to {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
   }
-  
-  @keyframes rotate1 {
-    from {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
-    }
-    to {
-      transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
-    }
-  }
-  @keyframes rotate2 {
-    from {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
-    }
-    to {
-      transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
-    }
-  }
-  @keyframes rotate3 {
-    from {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
-    }
-    to {
-      transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
-    }
-  }
-  
+}
 
   /*=============== MEDIA QUERY ===============*/
 
