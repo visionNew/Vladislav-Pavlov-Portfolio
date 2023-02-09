@@ -1,22 +1,31 @@
+/*=============== HERO SECTION STYLE ===============*/
 #hero {
     padding-top: 12rem;
     padding-bottom: 0;
     position: relative;
 }
-
+/*=============== HERO CONTAINER STYLE ===============*/
 .hero__container {
     display: grid;
     grid-template-columns: 48% 52%;
     gap: 7%;
     place-items: center;
 }
-
+/*=============== HERO PROFILE STYLE ===============*/
 .hero__profile {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-self: start;
     padding-left: 3rem;
+}
+
+.hero__profile h1 {
+    margin-bottom: 2.5rem;
+}
+
+.hero__profile h1 > span{
+    color: var(--color-text-variant);
 }
 
 .hero__profile h5 {
@@ -28,66 +37,62 @@
     letter-spacing: -1px;
 }
 
-.hero__profile h1 {
-    margin-bottom: 2.5rem;
-}
-
-.hero__profile h1 > span{
-    color: var(--color-text-variant);
-}
-
 .hero__profile p {
-    width: 25rem;
+    width: 30rem;
     margin-bottom: 3.5rem;
 }
-
+/*=============== HERO BUTTONS STYLE ===============*/
 .hero__btn {
     display: flex;
     gap: 1.5rem;
 }
-
+/*=============== HERO SOCIAL BUTTONS STYLE ===============*/
 .hero__profile .btn__socials {
     position: absolute;
     bottom: 2%;
 }
-
+/*=============== HERO IMAGE STYLE ===============*/
 .hero__container > img{
     background: url(../../assets/Background.png) no-repeat;
     background-size: cover;
     background-position:0 3rem;
   
 }
-
+/*=============== HERO MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
     #hero{
         margin-top: 0;
-        padding-top: 10rem;
+        padding-top: 14.5rem;
     }
+
     .hero__container {
-        grid-template-columns: 50% 52%;
+        grid-template-columns: 48% 61%;
         gap: 5%;
-    }
-    .hero__profile {
-        padding-left: 0;
-    }
-    .hero__profile .btn__socials {
-        flex-direction: column;
-        left: 50%;
-        bottom: 12%;
-    }
-  }
-@media screen and  (max-width: 600px) { 
-    .hero__container {
-       display: flex;
-       flex-direction: column;
-       margin-top: 5rem;
     }
 
     .hero__profile {
-        max-width: 100%;
-        min-height: 35vh;
         padding-left: 0;
-        align-items: center;
+    }
+
+    .hero__profile .btn__socials {
+        right: 13%;
+        bottom: 70%;
+    }
+}
+
+@media screen and  (max-width: 600px) {
+    #hero{
+        padding-top: 10.5rem;
+    }
+    .hero__container {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+    }
+
+    .hero__profile {
+       max-width: 100%;
+       align-items: center;
     }
 
     .hero__profile p {
@@ -96,5 +101,8 @@
 
     .hero__profile .btn__socials {
         display: none;
+    }
+    .hero__container > img{
+        padding-top: 0;
     }
 }

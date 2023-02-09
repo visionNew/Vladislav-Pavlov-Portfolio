@@ -1,39 +1,52 @@
-import './about.css';
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { FaDownload } from 'react-icons/fa';
-import { AiOutlineSafetyCertificate } from 'react-icons/ai';
-import CV from '../../assets/CV-VZP.pdf';
-import IMGAbout from '../../assets/vp-person-about.png';
-import IMGCert from '../../assets/certificate.png';
+import './about.css'; // CSS FILE FOR COMPONENT
+import { useState } from 'react'; // REACT HOOKS
+import { useTranslation } from 'react-i18next'; // TRANSLATION FILE
+import { FaDownload } from 'react-icons/fa'; // IMPORT ICON FILE
+import { AiOutlineSafetyCertificate } from 'react-icons/ai'; // IMPORT ICON FILE
+import CV from '../../assets/CV-VZP.pdf';// PDF CV FILE
+import IMGAbout from '../../assets/vp-person-about.png';// IMAGE PERSONA FILE
+import IMGCert from '../../assets/certificate.png'; // IMAGE CERTIFICATE FILE
 
 const About = () => {
-      const { t } = useTranslation();
-      const [isOpen, setIsOpen] = useState(false);
-      const togglePopup = () => { setIsOpen(!isOpen); }
-      const closePopup =() => { setIsOpen(false)}
-  
+  const { t } = useTranslation(); // FUNCTION TRANSLATION PAGE
+// START FUNCTION FOR POPUP
+  const [ isOpen, setIsOpen ] = useState(false);
+  const togglePopup = () => setIsOpen(!isOpen); 
+  const closePopup =() => setIsOpen(false); 
+// END FUNCTION FOR POPUP
   return (
     <section id="about">
+      {/* ============== Start About Section ============== */}
         <div className="container about__container">
+          {/* ============== Start About Left Info ============== */}
             <div className="about__left">
+            {/* ============== Start About Image ============== */}
               <div className="about__portrait">
                 <img src={IMGAbout} alt="About Persona" />
               </div>
+            {/* ============== End About Image ============== */}
             </div>
+          {/* ============== End About Left Info ============== */}
+          {/* ============== Start About Right Info ============== */}
             <div className="about__right">
-              <h2>{t('about-h2')}</h2>
+              <h2>{t('about-h2')}</h2> {/* ============== About H2 ============== */}
                 <p>
-                  {t('about-p.1')}
+                  {t('about-p.1')}{/* ============== About Paragraph Info ============== */}
                 </p>
                 <p>
-                  {t('about-p.2')}
+                  {t('about-p.2')} {/* ============== About Paragraph Info ============== */}
                 </p>
+              {/* ============== Start About Buttons ============== */}
                 <div className="about__btns">
+                {/* ============== Start About Buttons Download ============== */}
                   <a href={CV} download className='btn'>{t('about-btn.1')} <FaDownload /></a>
+                {/* ============== End About Buttons Download ============== */}
+                {/* ============== Start About Buttons Popup Certificate ============== */}
                   <button onClick={togglePopup} className='btn'>{t('about-btn.2')} <AiOutlineSafetyCertificate className='btn-icon' /></button>  
+                {/* ============== End About Buttons Popup Certificate ============== */}
                 </div>
-                
+              {/* ============== End About Buttons ============== */}
+              {/* ============== Start About Popup Certificate ============== */}
                 <div>
                   {
                     isOpen && <div onClick = {closePopup} className="popup__container">
@@ -43,8 +56,11 @@ const About = () => {
                               </div>
                   }
                 </div>
+              {/* ============== End About Popup Certificate ============== */}
              </div>
+          {/* ============== End About Right Info ============== */}  
           </div>
+      {/* ============== End About Section ============== */}
     </section>
 
   )

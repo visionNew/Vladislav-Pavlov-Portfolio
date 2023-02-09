@@ -1,15 +1,16 @@
-.container.contact__container{
+/*=============== CONTACT CONTAINER STYLE ===============*/
+.contact__container {
     display: grid;
     gap: 12%;
 }
-
+/*=============== CONTACT OPTIONS CARDS STYLE ===============*/
 .contact__options {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.2rem;
 }
 
-.contact__option{
+.contact__option {
     background-color: var(--color-body);
     padding: 1rem;
     border-radius: 1rem;
@@ -22,26 +23,23 @@
     color: var(--color-white);
 }
 
-.contact__option:hover{
+.contact__option:hover {
     background-color: transparent;
     border-color: var(--color-text-variant);
     color: var(--color-text-variant);
     transform: var(--transform);
 }
 
-.contact__option-icon{
+.contact__option-icon {
     font-size: 2.7rem;
 }
 
-.contact__option a{
+.contact__option a {
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 1rem;
 }
-
-
-/*========== FORM ==========*/
-
+/*========== CONTACT FORM STYLE ==========*/
 form {
     width: 100%;
     display: flex;
@@ -55,11 +53,11 @@ input, textarea{
     padding: 1.5rem;
     border-radius: .5rem;
     background: transparent;
-    border: 2px solid var(--color-title);
+    border: 2px solid var(--color-text-variant);
     color:var(--color-white);
     resize: none;
 }
-
+/*=============== CONTACT MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
     .container.contact__container{
         grid-template-columns: 1fr;
@@ -77,6 +75,7 @@ input, textarea{
         padding-left: 10rem;
     }
 }
+
 @media screen and  (max-width: 600px) { 
     .container.contact__container{
         width: var(--container-width-sm);

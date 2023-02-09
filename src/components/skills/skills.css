@@ -1,9 +1,10 @@
+/*=============== SKILLS CONTAINER STYLE ===============*/
 .skills__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
 }
-
+/*=============== SKILLS CARDS STYLE ===============*/
 .skill__card {
     background-color: var(--color-body);
     color: var(--color-white);
@@ -37,7 +38,7 @@
 .skill__card small {
     margin-bottom: 1.5rem;
 }
-
+/*=============== SKILLS MEDIA QUERY STYLE ===============*/
 @media screen and  (max-width: 600px) { 
     .skills__container {
         grid-template-columns: 1fr 1fr;

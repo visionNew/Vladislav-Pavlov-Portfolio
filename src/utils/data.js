@@ -6,10 +6,10 @@
                     //============== -4- PORTFOLIO DATA ==============
                     //============== -5- CONTACT DATA ==============
 
-import { FaFacebook, FaGithub, FaLinkedin, FaReact, FaVuejs, FaViber, FaPhone, FaFacebookMessenger } from 'react-icons/fa';
-import { IoLogoCss3, IoLogoJavascript, IoLogoHtml5 } from 'react-icons/io'
-import { SiTypescript } from 'react-icons/si'
-import { MdOutlineEmail } from 'react-icons/md';
+import { FaFacebook, FaGithub, FaLinkedin, FaReact, FaVuejs, FaViber, FaPhone, FaFacebookMessenger } from 'react-icons/fa'; // IMPORT ICON FILE
+import { IoLogoCss3, IoLogoJavascript, IoLogoHtml5 } from 'react-icons/io'; // IMPORT ICON FILE
+import { SiTypescript } from 'react-icons/si'; // IMPORT ICON FILE
+import { MdOutlineEmail } from 'react-icons/md'; // IMPORT ICON FILE
 
     //============== -1- NAVBAR DATA ==============
 export const navData= [

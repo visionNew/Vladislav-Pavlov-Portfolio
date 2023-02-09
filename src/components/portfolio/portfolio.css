@@ -1,24 +1,18 @@
-.portfolio_container{
+/*=============== PORTFOLIO CONTAINER STYLE ===============*/
+.portfolio__container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.portfolio_cards {
+/*=============== PORTFOLIO CARD STYLE ===============*/
+.portfolio__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     margin-bottom: 3rem;
 }
 
-
-.btn-load {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    justify-self: center;
-  }
-
-.portfolio_item {
+.portfolio__item {
     background-color: var(--color-item);
     padding: 1.3rem;
     border-radius: var(--border-radius-2);
@@ -26,26 +20,32 @@
     transition: var(--transition);
 }
 
-.portfolio_item:hover {
+.portfolio__item:hover {
     background-color: transparent;
     background-color: var(--color-item-variant); 
 }
 
-.portfolio_item-image {
+.portfolio__item-image {
     border-radius: var(--border-radius-2);
     overflow: hidden;
 }
 
-.portfolio_item h3{
+.portfolio__item h3{
     margin: 1.2rem 0 2rem;
 }
-
-.portfolio_item-links{
+/*=============== PORTFOLIO CARD BUTTONS STYLE ===============*/
+.portfolio__item-links{
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
-
+/*=============== PORTFOLIO lOAD BUTTON STYLE ===============*/
+.btn-load {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+}
+/*=============== PORTFOLIO MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
     .portfolio_cards {
         grid-template-columns: 1fr 1fr;

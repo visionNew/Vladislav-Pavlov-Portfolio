@@ -1,11 +1,12 @@
+/*=============== DROPDOWN MENU STYLE ===============*/
 .dropdown {
     width: 10rem;
     position: relative;
     display: none;
     user-select:none;
 }
-
-.dropdown-btn {
+/*=============== DROPDOWN BUTTON STYLE ===============*/
+.dropdown__btn {
     padding: 0.6rem 2.5rem;
     border-bottom: 1px solid var(--color-text-variant);
     cursor: pointer;
@@ -15,17 +16,11 @@
     position: relative;
 }
 
-.dropdown-icon{
-    /* position: absolute; */
-    /* bottom: -100%; */
-    font-size: 2rem;
-}
-
-.dropdown > .dropdown-btn:hover {
+.dropdown > .dropdown__btn:hover {
     transform: none;
 }
-
-.dropdown > .dropdown-content {
+/*=============== DROPDOWN MENU BUTTONS STYLE ===============*/
+.dropdown > .dropdown__content {
     position: absolute;
     top: 110%;
     border-radius: var(--border-radius-3);
@@ -38,29 +33,26 @@
     padding-bottom: 1rem;
 }
 
-.dropdown-item{
+.dropdown__item {
     width: 100%;
 }
 
-.dropdown-item > a {
+.dropdown__item > a {
      padding: 0.6rem 2.5rem;
      border-bottom: 1px solid transparent;
      display: grid;
      place-items: center;
 }
 
-
-.dropdown .dropdown-content .dropdown-item a:hover {
+.dropdown__item a:hover {
     background: transparent;
     color: var(--color-text-variant);
     border-bottom: 1px solid var(--color-text-variant);
     transition: var(--transition);
 }
+/*=============== DROPDOWN MEDIA QUERY STYLE ===============*/
 @media screen and  (max-width: 600px) { 
     .dropdown {
         display: block;
     }
 }
-
-
-.displayN{display: none;}

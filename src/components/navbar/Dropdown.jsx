@@ -1,26 +1,34 @@
-import './dropdown.css';
-import { navData } from '../../utils/data';
-import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import './dropdown.css'; // CSS FILE FOR COMPONENT
+import { navData } from '../../utils/data'; // DATA FILE FOR COMPONENT
+import { useState } from "react"; // REACT HOOKS
+import { useTranslation } from 'react-i18next'; // TRANSLATION FILE
 
 function Dropdown ({ selected, setSelected }) {
-    const { t } = useTranslation();
-    const [isActive, setIsActive] = useState(false);
+    const { t } = useTranslation(); // FUNCTION TRANSLATION PAGE
+    const [isActive, setIsActive] = useState(false); // FUNCTION FOR ACTIVE
+    
     return (
             <div className="dropdown">
-                <div className="dropdown-btn" onClick={(e) => {setIsActive(!isActive)}} >
-                {t(selected || "nav.1")}
+            {/* ============== Start Dropdown Menu ============== */}
+            {/* ============== Start Dropdown Button ============== */}
+                <div className="dropdown__btn" onClick={(e) => {setIsActive(!isActive)}} >
+                    {t(selected || "nav.1")}
                 </div>
-                {
+            {/* ============== End Dropdown Button ============== */}
+            {/* ============== Start Dropdown Menu Button ============== */}
+                { // FUNCTION FOR ACTIVE
                     isActive && (
-                        <ul className="dropdown-content">
-                            {   navData.map((item) => (
-                                <li onClick={(e) => { setSelected (item.title); setIsActive(false);}} className="dropdown-item">
+                        <ul className="dropdown__content">
+                            {   // NAVBAR DATA MAP
+                                navData.map((item) => (
+                                <li onClick={(e) => { setSelected (item.title); setIsActive(false);}} className="dropdown__item">
                                     <a href={item.link}>{t(item.title)}</a>
-                                </li>
-                            ))}
+                                </li>))
+                            }
                         </ul>)
                 }
+            {/* ============== End Dropdown Menu Button ============== */}
+            {/* ============== End Dropdown Menu ============== */}
             </div>
         );
     }

@@ -1,15 +1,17 @@
-import './skills.css';
-import { skillData } from '../../utils/data';
-import { useTranslation } from 'react-i18next';
+import './skills.css'; // CSS FILE FOR COMPONENT
+import { skillData } from '../../utils/data'; // DATA FILE FOR COMPONENT
+import { useTranslation } from 'react-i18next'; // TRANSLATION FILE
 
 const Skills = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // FUNCTION TRANSLATION PAGE
 
   return (
-    <section  id="skills" className='section'>
-        <h2>{t('skills-h2')}</h2>
+    <section  id="skills">
+      {/* ============== Start Skills Section ============== */}
+        <h2>{t('skills-h2')}</h2>{/* ============== Skills H2 ============== */}
+      {/* ============== Start Skills Cards ============== */}
         <div className="container skills__container">
-          {
+          { // SKILL DATA MAP
             skillData.map(item =>
               <div key={item.id} className="skill__card">
                  <span className="card__icon">{item.icon}</span>
@@ -18,6 +20,8 @@ const Skills = () => {
               </div>)
           }
         </div>
+      {/* ============== End Skills Cards ============== */}
+      {/* ============== End Skills Section ============== */}
     </section>
   )
 }
