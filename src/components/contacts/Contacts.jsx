@@ -19,7 +19,7 @@ const Contacts = () => {
       {/* ============== Start Contact Options ============== */}
         <div className="contact__options">
           { // CONTACT DATA MAP
-            contactData.map(item => <article className="contact__option" key={item.id}>
+            contactData.map(item => <article className={item.class} key={item.id}>
                   {item.icon} {/* ============== Options Icon ============== */}
               <div>
                   <h4>{item.h4}</h4> {/* ============== Options H4 ============== */}
@@ -31,7 +31,7 @@ const Contacts = () => {
         </div>
       {/* ============== End Contact Options ============== */}
       {/* ============== Start Contact Form ============== */}
-        <form>
+        <form className='blur'>
             <input value={name} name="name" placeholder={t('contact-placeholder.1')} onChange={({target}) => setName(target.value)} required/>
             <input value={email} type="email"  name="email" placeholder={t('contact-placeholder.2')} onChange={({target}) => setEmail(target.value)} required/>
             <textarea value={message} name="message" rows="7" placeholder={t('contact-placeholder.3')} onChange={({target}) => setMessage(target.value)} required></textarea>

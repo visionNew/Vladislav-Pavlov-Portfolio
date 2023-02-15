@@ -10,19 +10,19 @@ const Footer = () => {
     <footer id='footer' className="container">
       {/* ============== Start Footer Section ============== */}
       {/* ============== Start Logo ============== */}
-        <a href="#header" className='footer__logo'>
+        <a href="#hero" className='footer__logo'>
           <img src={Logo} alt="Logo" />
         </a>
       {/* ============== End Logo ============== */}
       {/* ============== Start Social Buttons ============== */}
-        <div className="btn__socials">
+        <div className="btn__socials blur">
           {// SOCIAL DATA MAP
             socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
           }
         </div>
       {/* ============== End Social Buttons ============== */}
       {/* ============== Start Copyright ============== */}
-        <div>
+        <div className='blur'>
             <small>&copy; {t('footer-small')}</small>
         </div>
       {/* ============== End Copyright ============== */}

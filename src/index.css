@@ -67,7 +67,8 @@
     --border-radius-3: 0.5rem;
 
     /*========== transition ==========*/
-    --transition: all 500ms ease-in-out;
+    --transition: all 0.5s ease-in-out;
+    --transition-slow: all 1s ease-in-out;
 
     /*========== transform ==========*/
     --transform: translate(-0.3rem, -0.3rem);
@@ -130,57 +131,57 @@ h3 {
 }
   
 a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: var(--transition);
-  }
+  color: var(--color-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
   
 button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
   
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 
   /*=============== GENERAL CONTAINER CLASS ===============*/
 
 .container{
-    width: var(--container-width-lg);
-    margin-inline: auto;
-    max-width: 1920px;
-  }
+  width: var(--container-width-lg);
+  margin-inline: auto;
+  max-width: 1920px;
+}
 
   /*=============== GENERAL SECTION STYLES ===============*/
 
 section {
-    padding: 10rem 0;
-    transition: var(--transition);
-    z-index: var(--z-tooltip);
-  }
+  padding: 10rem 0;
+  transition: var(--transition);
+  z-index: var(--z-tooltip);
+}
 
 section:nth-child(even) {
-    background-color: var(--color-section);
-    z-index: var(--z-tooltip);
-    background-image:  url(./assets/Sprinkle.svg);
-    background-size: 55rem;
-  } 
+  background-color: var(--color-section);
+  z-index: var(--z-tooltip);
+  background-image:  url(./assets/Sprinkle.svg);
+  background-size: 55rem;
+} 
 
 section > h2{
-   text-align: center;
-  }
+  text-align: center;
+}
 
 section > p{
-    text-align: center;
-    margin: 0.5rem auto 4rem;
-    width: 40%;
-  }
+  text-align: center;
+  margin: 0.5rem auto 4rem;
+  width: 40%;
+}
 
    /*=============== GENERAL BUTTON STYLES ===============*/
 
@@ -339,5 +340,4 @@ body::-webkit-scrollbar-thumb {
   section {
     margin-top: 2rem;
   }
- 
 }

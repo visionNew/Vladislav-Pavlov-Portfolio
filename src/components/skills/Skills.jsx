@@ -13,7 +13,7 @@ const Skills = () => {
         <div className="container skills__container">
           { // SKILL DATA MAP
             skillData.map(item =>
-              <div key={item.id} className="skill__card">
+              <div key={item.id} className={item.class}>
                  <span className="card__icon">{item.icon}</span>
                  <h5>{item.title}</h5>
                  <small>{t(item.desc)}</small>

@@ -1,21 +1,24 @@
 /* ============================ TABLE OF CONTENTS ============================ */
 
 /* ============== -1- H2 STYLES ============== */
-/* ============== -2- CARDS STYLES ============== */
-/* ============== -3- NAVBAR STYLES =============== */
+/* ============== -2- NAVBAR STYLES =============== */
+/* ============== -3- LEFT SLIDE STYLES ==============*/
+/* ============== -4- RIGHT SLIDE STYLES ==============*/
+/* ============== -5- BLUR STYLES ==============*/
+/* ============== -6- SHOW STYLES ==============*/
 
  /*=============== ANIMATION STYLES ===============*/
       /*=========== -1- H2 STYLES ===========*/
-      .tracking-in-expand-fwd {
+.tracking-in-expand-fwd {
         -webkit-animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 animation: tracking-in-expand-fwd 1.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    }
-    /**
-    * ----------------------------------------
-    * animation tracking-in-expand-fwd
-    * ----------------------------------------
-    */
-    @-webkit-keyframes tracking-in-expand-fwd {
+}
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand-fwd {
      0% {
        letter-spacing: -0.5em;
        -webkit-transform: translateZ(-700px);
@@ -30,8 +33,8 @@
                transform: translateZ(0);
        opacity: 1;
      }
-    }
-    @keyframes tracking-in-expand-fwd {
+}
+@keyframes tracking-in-expand-fwd {
      0% {
        letter-spacing: -0.5em;
        -webkit-transform: translateZ(-700px);
@@ -46,92 +49,19 @@
                transform: translateZ(0);
        opacity: 1;
      }
-    }
+}
     
-      /*=========== -2- CARDS STYLES ===========*/
-    
-    .scale-in-center {
-        -webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-    
-    /**
-     * ----------------------------------------
-     * animation scale-in-center
-     * ----------------------------------------
-     */
-     @-webkit-keyframes scale-in-center {
-        0% {
-          -webkit-transform: scale(0);
-                  transform: scale(0);
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          opacity: 1;
-        }
-      }
-      @keyframes scale-in-center {
-        0% {
-          -webkit-transform: scale(0);
-                  transform: scale(0);
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          opacity: 1;
-        }
-      }
-    
-    
-    .scale-out-center {
-        -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-                animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-    }
-    
-    /**
-     * ----------------------------------------
-     * animation scale-out-center
-     * ----------------------------------------
-     */
-     @-webkit-keyframes scale-out-center {
-      0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        -webkit-transform: scale(0);
-                transform: scale(0);
-        opacity: 1;
-      }
-    }
-    @keyframes scale-out-center {
-      0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        -webkit-transform: scale(0);
-                transform: scale(0);
-        opacity: 1;
-      }
-    }
-    
-     /*=========== -3- NAVBAR STYLES ===========*/
-    .bounce-in-top {
+     /*=========== -2- NAVBAR STYLES ===========*/
+.bounce-in-top {
         -webkit-animation: bounce-in-top 1.1s both;
                 animation: bounce-in-top 1.1s both;
-    }
-    /**
-     * ----------------------------------------
-     * animation bounce-in-top
-     * ----------------------------------------
-     */
-    @-webkit-keyframes bounce-in-top {
+}
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-top {
       0% {
         -webkit-transform: translateY(-500px);
                 transform: translateY(-500px);
@@ -182,8 +112,8 @@
         -webkit-animation-timing-function: ease-out;
                 animation-timing-function: ease-out;
       }
-    }
-    @keyframes bounce-in-top {
+}
+@keyframes bounce-in-top {
       0% {
         -webkit-transform: translateY(-500px);
                 transform: translateY(-500px);
@@ -234,4 +164,39 @@
         -webkit-animation-timing-function: ease-out;
                 animation-timing-function: ease-out;
       }
-    }
+}
+
+/*=========== -3- LEFT SLIDE STYLES ===========*/
+.slide-in-left  {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-200px);
+    transition: var(--transition-slow);
+}
+
+/*=========== -4- RIGHT SLIDE STYLES ===========*/
+.slide-in-right, .slide-in-right-2 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(200px);
+    transition: var(--transition-slow);
+}
+.slide-in-right-2 {
+    transform: translateX(130px);
+}
+
+/*=========== -5- BLUR STYLES ===========*/
+.blur {
+    opacity: 0;
+    filter: blur(5px);
+    transition: var(--transition-slow);
+    transition-duration: 2s;
+}
+
+/*=========== -6- SHOW STYLES ===========*/
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+

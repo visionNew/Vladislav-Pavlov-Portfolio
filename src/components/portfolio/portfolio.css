@@ -47,14 +47,14 @@
 }
 /*=============== PORTFOLIO MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
-    .portfolio_cards {
+    .portfolio__cards {
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
   }
 }
-  @media screen and  (max-width: 600px) { 
-    .portfolio_cards {
+@media screen and  (max-width: 600px) { 
+    .portfolio__cards {
         grid-template-columns: 1fr;
         gap: 1rem;
   }
-  }
+}

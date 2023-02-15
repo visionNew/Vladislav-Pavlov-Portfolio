@@ -18,7 +18,7 @@ const Portfolio = () => {
         {/* ============== Start Portfolio Card ============== */}
           <div className="portfolio__cards">
             { // PORTFOLIO CARD DATA MAP
-              slice.map(item => <article className="portfolio__item scale-in-center" key={item.id}>
+              slice.map(item => <article className={item.class} key={item.id}>
                                 {/* ============== Start Card Image ============== */} 
                                   <div className="portfolio__item-image">
                                     <img src={require('../../assets/project/' + item.img_name + '.png')} alt="Project Img" />
@@ -27,8 +27,8 @@ const Portfolio = () => {
                                   <h3>{t(item.title)}</h3> {/* ============== Card H3 ============== */}
                                 {/* ============== Start Card Buttons ============== */}
                                   <div className="portfolio__item-links">
-                                      <a href={item.link_git} className="btn" target={item.target}>GitHub</a>
-                                      <a href={item.link_dribb} className="btn" target={item.target}>{t('portfolio-btn.1')}</a> 
+                                      <a href={item.link_git} className="btn blur" target={item.target}>GitHub</a>
+                                      <a href={item.link_dribb} className="btn blur" target={item.target}>{t('portfolio-btn.1')}</a> 
                                   </div>
                                 {/* ============== End Card Buttons ============== */}
                              </article>)

@@ -10,6 +10,7 @@
     grid-template-columns: 48% 52%;
     gap: 7%;
     place-items: center;
+    position: relative;
 }
 /*=============== HERO PROFILE STYLE ===============*/
 .hero__profile {
@@ -34,7 +35,7 @@
 }
 
 .hero__profile h5 > span{
-    letter-spacing: -1px;
+    letter-spacing: -1.7px;
 }
 
 .hero__profile p {
@@ -47,9 +48,10 @@
     gap: 1.5rem;
 }
 /*=============== HERO SOCIAL BUTTONS STYLE ===============*/
-.hero__profile .btn__socials {
+.hero__container .btn__socials {
     position: absolute;
     bottom: 2%;
+    left:3%;
 }
 /*=============== HERO IMAGE STYLE ===============*/
 .hero__container > img{
@@ -72,11 +74,11 @@
 
     .hero__profile {
         padding-left: 0;
+        padding-bottom: 2rem;
     }
 
-    .hero__profile .btn__socials {
-        right: 13%;
-        bottom: 70%;
+    .hero__container .btn__socials {
+        left: 0;
     }
 }
 
@@ -99,7 +101,7 @@
         width: 100%;
     }
 
-    .hero__profile .btn__socials {
+    .hero__container .btn__socials {
         display: none;
     }
     .hero__container > img{

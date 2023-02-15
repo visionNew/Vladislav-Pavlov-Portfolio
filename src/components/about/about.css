@@ -13,6 +13,11 @@
     transition: var(--transition);
     border-radius: var(--border-radius-2);
 }
+.about__portrait > img{
+    background: url(../../assets/Background.png) no-repeat;
+    background-size: cover;
+    background-position:-5rem 1rem;
+}
 
 .about__portrait:hover {
     border-width: 0;
