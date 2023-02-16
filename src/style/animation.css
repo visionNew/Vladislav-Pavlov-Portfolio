@@ -2,10 +2,11 @@
 
 /* ============== -1- H2 STYLES ============== */
 /* ============== -2- NAVBAR STYLES =============== */
-/* ============== -3- LEFT SLIDE STYLES ==============*/
-/* ============== -4- RIGHT SLIDE STYLES ==============*/
-/* ============== -5- BLUR STYLES ==============*/
-/* ============== -6- SHOW STYLES ==============*/
+/* ============== -3- CARDS STYLES ============== */
+/* ============== -4- LEFT SLIDE STYLES ==============*/
+/* ============== -5- RIGHT SLIDE STYLES ==============*/
+/* ============== -6- BLUR STYLES ==============*/
+/* ============== -7- SHOW STYLES ==============*/
 
  /*=============== ANIMATION STYLES ===============*/
       /*=========== -1- H2 STYLES ===========*/
@@ -165,8 +166,41 @@
                 animation-timing-function: ease-out;
       }
 }
-
-/*=========== -3- LEFT SLIDE STYLES ===========*/
+/*=========== -3- CARDS STYLES ===========*/
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-center {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes scale-in-center {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          opacity: 1;
+        }
+}    
+/*=========== -4- LEFT SLIDE STYLES ===========*/
 .slide-in-left  {
     opacity: 0;
     filter: blur(5px);
@@ -174,7 +208,7 @@
     transition: var(--transition-slow);
 }
 
-/*=========== -4- RIGHT SLIDE STYLES ===========*/
+/*=========== -5- RIGHT SLIDE STYLES ===========*/
 .slide-in-right, .slide-in-right-2 {
     opacity: 0;
     filter: blur(5px);
@@ -185,7 +219,7 @@
     transform: translateX(130px);
 }
 
-/*=========== -5- BLUR STYLES ===========*/
+/*=========== -6- BLUR STYLES ===========*/
 .blur {
     opacity: 0;
     filter: blur(5px);
@@ -193,10 +227,9 @@
     transition-duration: 2s;
 }
 
-/*=========== -6- SHOW STYLES ===========*/
+/*=========== -7- SHOW STYLES ===========*/
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
-

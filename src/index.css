@@ -173,11 +173,12 @@ section:nth-child(even) {
   background-size: 55rem;
 } 
 
-section > h2{
+section > h2 {
   text-align: center;
 }
 
-section > p{
+section > p {
+  color: var(--color-text-variant);
   text-align: center;
   margin: 0.5rem auto 4rem;
   width: 40%;
