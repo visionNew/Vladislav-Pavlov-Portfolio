@@ -45,7 +45,8 @@
     "portfolio-h3": "My Personal Website",
     "portfolio-btn": {
             "1":"Live Demo",
-            "2":"Load More"
+            "2":"Load More",
+            "3":"All"
     },
 
     "contact-h2": "CONTACTS",
