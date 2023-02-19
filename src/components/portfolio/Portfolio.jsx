@@ -1,6 +1,6 @@
 import './portfolio.css'; // CSS FILE FOR COMPONENT
 import { cardData } from '../../utils/data'; // DATA FILE FOR COMPONENT
-import { useState, useEffect } from "react"; // REACT HOOKS
+import { useState, useEffect, useRef } from "react"; // REACT HOOKS
 import { useTranslation } from 'react-i18next'; // TRANSLATION FILE
 
 const Portfolio = () => {
@@ -9,9 +9,18 @@ const Portfolio = () => {
   const [ showMore, setShowMore ] = useState(3); 
   const [ data, setData ] = useState([]);
   const [ buttons, setButtons ] = useState([]);
-  
+  const portfolioRef = useRef(null);
   const slice = data.slice(0, showMore);
-  const loadMore = () =>{ setShowMore(showMore + 3);}
+  const loadMore = () => {
+    setShowMore(showMore + 3);
+    if (portfolioRef.current) {
+      portfolioRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
+  };
 
   useEffect(()=>{
     setData(cardData);
@@ -60,7 +69,7 @@ const Portfolio = () => {
           </div>
         {/* ============== End Portfolio Card ============== */}
           {/* ============== Start Load More Button ============== */}
-            {showMore && <button onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
+            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
           {/* ============== End Load More Button ============== */}
         </div>
       {/* ============== Start Portfolio Section ============== */}
