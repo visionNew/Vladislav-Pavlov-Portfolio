@@ -31,7 +31,7 @@ const Hero = () => {
             </div>
           {/* ============== End Social Buttons ============== */}
         {/* ============== Start Hero Right Info ============== */}
-          <img src={ImgPerson} alt="hero Person" className="slide-in-right-2" />
+          <img src={ImgPerson} alt="hero Person" className="slide-in-right" />
         {/* ============== End Hero Right Info ============== */}
         </div>
       {/* ============== End Hero Section ============== */}

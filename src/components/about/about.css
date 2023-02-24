@@ -68,6 +68,7 @@
 
     .about__container {
         grid-template-columns: 1fr;
+        padding-bottom: 2.6rem;
     }
 
     .about__container h2 {

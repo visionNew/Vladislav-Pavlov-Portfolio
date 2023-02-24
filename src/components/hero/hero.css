@@ -3,6 +3,7 @@
     padding-top: 12rem;
     padding-bottom: 0;
     position: relative;
+    overflow-x: hidden;
 }
 /*=============== HERO CONTAINER STYLE ===============*/
 .hero__container {
@@ -64,7 +65,7 @@
 @media screen and (max-width: 1024px) {
     #hero{
         margin-top: 0;
-        padding-top: 14.5rem;
+        padding-top: 19.5rem;
     }
     .hero__container {
         grid-template-columns: 48% 61%;

@@ -68,7 +68,7 @@
 
     /*========== transition ==========*/
     --transition: all 0.5s ease-in-out;
-    --transition-slow: all 1s ease-in-out;
+    --transition-slow: all 1.5s ease-in-out;
 
     /*========== transform ==========*/
     --transform: translate(-0.3rem, -0.3rem);
@@ -326,7 +326,7 @@ body::-webkit-scrollbar-thumb {
   /*=============== MEDIA QUERY ===============*/
 
 @media screen and (max-width: 1024px) {
-  .container{
+  .container {
     width: var(--container-width-md);
   }
   
@@ -335,7 +335,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media screen and  (max-width: 600px) { 
-  .container{
+  .container {
     width: var(--container-width-sm);
   }
   section {

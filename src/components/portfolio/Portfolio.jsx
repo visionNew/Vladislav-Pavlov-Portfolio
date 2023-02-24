@@ -13,6 +13,13 @@ const Portfolio = () => {
   const slice = data.slice(0, showMore);
   const loadMore = () => {
     setShowMore(showMore + 3);
+    if (portfolioRef.current) {
+      portfolioRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    }
   };
 
   useEffect(()=>{
@@ -20,16 +27,6 @@ const Portfolio = () => {
     setButtons(['All', ...new Set(cardData.map((item)=> item.category))])
   },[]) 
 
-  useEffect(() => {
-    console.log(portfolioRef.current);
-    if (portfolioRef.current) {
-      window.scrollBy({
-        top: portfolioRef.current.getBoundingClientRect().top - 80,
-        behavior: 'smooth'
-      })
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [portfolioRef.current])
 
   const filter = (itemData) =>{
   if(itemData === 'All'){
@@ -55,7 +52,7 @@ const Portfolio = () => {
         {/* ============== End Portfolio Filter Buttons ============== */}
           <div className="portfolio__cards blur">
             { // PORTFOLIO CARD DATA MAP
-              slice.map((item, index) => <article className="portfolio__item scale-in-center" id={item.id} key={item.id} ref={index === slice.length - 3 ? portfolioRef : null}>
+              slice.map(item => <article className="portfolio__item scale-in-center" key={item.id}>
                                 {/* ============== Start Card Image ============== */} 
                                   <div className="portfolio__item-image">
                                     <img src={require('../../assets/project/' + item.img_name + '.png')} alt="Project Img" />
@@ -73,7 +70,7 @@ const Portfolio = () => {
           </div>
         {/* ============== End Portfolio Card ============== */}
           {/* ============== Start Load More Button ============== */}
-            {showMore && <button onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
+            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
           {/* ============== End Load More Button ============== */}
         </div>
       {/* ============== Start Portfolio Section ============== */}
