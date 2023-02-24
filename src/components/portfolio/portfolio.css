@@ -53,14 +53,18 @@
 }
 /*=============== PORTFOLIO MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
-    .portfolio__cards {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-  }
+.portfolio__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
 }
 @media screen and  (max-width: 600px) { 
-    .portfolio__cards {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-  }
+.portfolio__cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.filter__btn{
+    flex-direction: column;
+    align-items: center;
+}
 }

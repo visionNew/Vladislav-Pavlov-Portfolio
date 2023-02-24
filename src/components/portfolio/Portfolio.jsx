@@ -13,19 +13,23 @@ const Portfolio = () => {
   const slice = data.slice(0, showMore);
   const loadMore = () => {
     setShowMore(showMore + 3);
-    if (portfolioRef.current) {
-      portfolioRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-    }
   };
 
   useEffect(()=>{
     setData(cardData);
     setButtons(['All', ...new Set(cardData.map((item)=> item.category))])
   },[]) 
+
+  useEffect(() => {
+    console.log(portfolioRef.current);
+    if (portfolioRef.current) {
+      window.scrollBy({
+        top: portfolioRef.current.getBoundingClientRect().top - 80,
+        behavior: 'smooth'
+      })
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [portfolioRef.current])
 
   const filter = (itemData) =>{
   if(itemData === 'All'){
@@ -45,13 +49,13 @@ const Portfolio = () => {
         {/* ============== Start Portfolio Filter Buttons ============== */}
           <div className="filter__btn blur">
               {
-                buttons.map((item, i)=> <button className="btn" onClick={()=>{filter(item)}}>{item}</button>)
+                buttons.map((item, i)=> <button key={`button-${i}`} className="btn" onClick={()=>{filter(item)}}>{item}</button>)
               }
           </div>
         {/* ============== End Portfolio Filter Buttons ============== */}
           <div className="portfolio__cards blur">
             { // PORTFOLIO CARD DATA MAP
-              slice.map(item => <article className="portfolio__item scale-in-center" key={item.id}>
+              slice.map((item, index) => <article className="portfolio__item scale-in-center" id={item.id} key={item.id} ref={index === slice.length - 3 ? portfolioRef : null}>
                                 {/* ============== Start Card Image ============== */} 
                                   <div className="portfolio__item-image">
                                     <img src={require('../../assets/project/' + item.img_name + '.png')} alt="Project Img" />
@@ -60,8 +64,8 @@ const Portfolio = () => {
                                   <h3>{t(item.title)}</h3> {/* ============== Card H3 ============== */}
                                 {/* ============== Start Card Buttons ============== */}
                                   <div className="portfolio__item-links">
-                                      <a href={item.link_git} className="btn blur" target={item.target}>GitHub</a>
-                                      <a href={item.link_dribb} className="btn blur" target={item.target}>{t('portfolio-btn.1')}</a> 
+                                      <a href={item.link_git} className="btn" target={item.target}>GitHub</a>
+                                      <a href={item.link_dribb} className="btn" target={item.target}>{t('portfolio-btn.1')}</a> 
                                   </div>
                                 {/* ============== End Card Buttons ============== */}
                              </article>)
@@ -69,7 +73,7 @@ const Portfolio = () => {
           </div>
         {/* ============== End Portfolio Card ============== */}
           {/* ============== Start Load More Button ============== */}
-            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
+            {showMore && <button onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
           {/* ============== End Load More Button ============== */}
         </div>
       {/* ============== Start Portfolio Section ============== */}

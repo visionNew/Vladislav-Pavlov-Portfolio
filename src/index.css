@@ -152,7 +152,7 @@ img {
 
   /*=============== GENERAL CONTAINER CLASS ===============*/
 
-.container{
+.container {
   width: var(--container-width-lg);
   margin-inline: auto;
   max-width: 1920px;
