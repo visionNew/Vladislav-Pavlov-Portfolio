@@ -3,10 +3,10 @@ export const sendEmail = async (name, email, message) => {
         const encodedName = encodeURIComponent(name);
         const encodedEmail = encodeURIComponent(email);
         const encodedMessage = encodeURIComponent(message);
-    await fetch('http://localhost/send-email.php', {
+    await fetch('../services/send-email.php', {
         
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
