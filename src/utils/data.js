@@ -40,7 +40,7 @@ export const skillData= [
 
     //============== -4- PORTFOLIO DATA ==============
 export const cardData= [
-        {id: 1, title:'portfolio-h3', category:'React JS', img_name:'project-1', target:'_blank', link_git:'https://github.com/visionNew/Vladislav-Pavlov-Portfolio', link_dribb:'#index.html'},
+        {id: 1, title:'portfolio-h3.1', category:'React JS', img_name:'project-1', target:'_blank', link_git:'https://github.com/visionNew/Vladislav-Pavlov-Portfolio', link_dribb:'#index.html'},
         {id: 2, title:'COCO Services V1', category:'Vanilla JS',  img_name:'project-2', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-1', link_dribb:'https://dribbble.com/shots/20404584-COCO-Services-V1'},
         {id: 3, title:'COCO Services V2', category:'Vanilla JS',  img_name:'project-3', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-2', link_dribb:'https://dribbble.com/shots/20405827-COCO-Services-V2'},
         {id: 4, title:'COCO Services V3', category:'Vanilla JS',  img_name:'project-4', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-3', link_dribb:'https://dribbble.com/shots/20405835-COCO-Services-V3'},
@@ -51,6 +51,7 @@ export const cardData= [
         {id: 9, title:'COCO Studios V3', category:'Vanilla JS', img_name:'project-9', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-3', link_dribb:'https://dribbble.com/shots/20426853-COCO-Sudios-V3'},
         {id: 10, title:'COCO Studios V4', category:'Vanilla JS', img_name:'project-10', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-4', link_dribb:'https://dribbble.com/shots/20426864-COCO-Sudios-V4'},
         {id: 11, title:'COCO Studios V5', category:'Vanilla JS', img_name:'project-11', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-5', link_dribb:'https://dribbble.com/shots/20426875-COCO-Sudios-V5'},
+        {id: 12, title:'portfolio-h3.2', category:'React JS', img_name:'project-12', target:'_blank', link_git:'https://github.com/visionNew/login-registration-form', link_dribb:'https://dribbble.com/shots/20764603-PopUp-Login-Form'},
     ];
     
     //============== -5- CONTACT DATA ==============

@@ -42,7 +42,10 @@
     },
 
     "portfolio-h2": "MY PORTFOLIO",
-    "portfolio-h3": "My Personal Website",
+    "portfolio-h3": {
+            "1":"My Personal Website",
+            "2":"PopUp Login Form"
+    },
     "portfolio-btn": {
             "1":"Live Demo",
             "2":"Load More",
