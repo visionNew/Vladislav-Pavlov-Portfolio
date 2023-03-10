@@ -1,5 +1,5 @@
 {
-        "nav":{
+        "nav": {
                 "1":"HOME",
                 "2":"ABOUT",
                 "3":"SKILLS",
@@ -44,7 +44,17 @@
         "portfolio-h2": "MY PORTFOLIO",
         "portfolio-h3": {
                 "1":"My Personal Website",
-                "2":"PopUp Login Form"
+                "2":"PopUp Login Form",
+                "3":"COCO Services V1",
+                "4":"COCO Services V2",
+                "5":"COCO Services V3",
+                "6":"COCO Services V4",
+                "7":"COCO Services V5",
+                "8":"COCO Studios V1",
+                "9":"COCO Studios V2",
+                "10":"COCO Studios V3",
+                "11":"COCO Studios V4",
+                "12":"COCO Studios V5"
         },
 
         "portfolio-btn": {
