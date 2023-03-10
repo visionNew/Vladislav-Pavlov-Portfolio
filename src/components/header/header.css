@@ -47,6 +47,7 @@ nav {
     background-color: transparent;
     color: var(--color-black);
     font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
 }
 .nav__menu  .btn::before, .translate > .btn::before {
     content: none;

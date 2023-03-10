@@ -28,13 +28,14 @@
     color: var(--color-black);
     padding: 1.3rem;
     border-radius: var(--border-radius-2);
-    border: 1px solid var(--color-white);
+    border: 1px solid transparent;
     transition: var(--transition);
 }
 
 .portfolio__item:hover {
     background-color: transparent;
     color: var(--color-white);
+    border: 1px solid var(--color-white);
 }
 
 .portfolio__item-image {
