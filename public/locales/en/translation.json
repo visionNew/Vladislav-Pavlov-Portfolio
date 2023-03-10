@@ -1,72 +1,75 @@
 {
-    "nav":{
-            "1":"HOME",
-            "2":"ABOUT",
-            "3":"SKILLS",
-            "4":"PORTFOLIO",
-            "5":"CONTACTS"
-    },
+        "nav":{
+                "1":"HOME",
+                "2":"ABOUT",
+                "3":"SKILLS",
+                "4":"PORTFOLIO",
+                "5":"CONTACTS"
+        },
 
-    "hero-span": "HELLO",
+        "hero-span": "HELLO",
 
-    "hero-h1": {
-            "1": "I'm",
-            "2": "Vladislav",
-            "3": "Pavlov"
-    },
+        "hero-h1": {
+                "1": "I'm",
+                "2": "Vladislav",
+                "3": "Pavlov"
+        },
 
-    "hero-p": "I am a Front-End Developer. I am bringing ideas to life with my skills, as well as creating dynamic and interactive Web experiences. I love to work with templates and to personalise them according to the unique requirements of the individual projects. Let us work together to create something magnificent.",
+        "hero-p": "I am a Front-End Developer. I am bringing ideas to life with my skills, as well as creating dynamic and interactive Web experiences. I love to work with templates and to personalise them according to the unique requirements of the individual projects. Let us work together to create something magnificent.",
 
-    "hero-btn": {
-            "1":"Let's Talk",
-            "2":"My Portfolio"
-    },
+        "hero-btn": {
+                "1":"Let's Talk",
+                "2":"My Portfolio"
+        },
 
-    "about-h2": "ABOUT ME",
-    "about-p": {
-            "1": "Hello, we have already got aquanted before. I am born in Bulgaria and I live in the city of Varna. I spend my time with programming, playing video games and I love the world of movies. I am always trying to be a good listener and to take advantage of the opportunities that life is presenting me. I am always putting care and responsibility in completing my tasks. I live a wholesome life, centered around family love, friendship and respect.",
-            "2": "I have acquired lots of skills and experience through the years. That made me a better man, who is taking every job with great responsibility. I have been working in various branches, taking in everything I can. This has been of great use developing my teamwork, skill range, creative way of thinking and it helped me be organized most of all. I have expanded my knowledge with lessons from Web development & software academy. My goal is to work in programming and to achieve maximum results in everything I do. My aim is constant improvement and learning, so I can keep up with the latest trends and to be able to give the best of me. "
-    },
-    
-    "about-btn": {
-            "1":"Download CV",
-            "2":"Certificate"
-    },
+        "about-h2": "ABOUT ME",
+        "about-p": {
+                "1": "Hello, we have already got aquanted before. I am born in Bulgaria and I live in the city of Varna. I spend my time with programming, playing video games and I love the world of movies. I am always trying to be a good listener and to take advantage of the opportunities that life is presenting me. I am always putting care and responsibility in completing my tasks. I live a wholesome life, centered around family love, friendship and respect.",
+                "2": "I have acquired lots of skills and experience through the years. That made me a better man, who is taking every job with great responsibility. I have been working in various branches, taking in everything I can. This has been of great use developing my teamwork, skill range, creative way of thinking and it helped me be organized most of all. I have expanded my knowledge with lessons from Web development & software academy. My goal is to work in programming and to achieve maximum results in everything I do. My aim is constant improvement and learning, so I can keep up with the latest trends and to be able to give the best of me. "
+        },
 
-    "skills-h2": "SKILLS",
-    "skills-desc": {
-            "1":"3+ Years Experiense",
-            "2":"2+ Years Experiense",
-            "3":"Little Experiense",
-            "4":"In The Future"
-    },
+        "about-btn": {
+                "1":"Download CV",
+                "2":"Certificate"
+        },
 
-    "portfolio-h2": "MY PORTFOLIO",
-    "portfolio-h3": {
-            "1":"My Personal Website",
-            "2":"PopUp Login Form"
-    },
-    "portfolio-btn": {
-            "1":"Live Demo",
-            "2":"Load More",
-            "3":"All"
-    },
+        "skills-h2": "SKILLS",
+        "skills-desc": {
+                "1":"3+ Years Experiense",
+                "2":"2+ Years Experiense",
+                "3":"Little Experiense",
+                "4":"In The Future"
+        },
 
-    "contact-h2": "CONTACTS",
-    "contact-h5": {
-            "1":"Vladislav Pavlov",
-            "2":"+359887330448"
-    },  
-    "contact-btn": {
-            "1": "Send a Message",
-            "2": "Call me!",
-            "3": "Send Message"
-    },
-    "contact-placeholder": {
-            "1": "Your Full Name",
-            "2": "Your Email",
-            "3": "Your Message"
-    },
+        "portfolio-h2": "MY PORTFOLIO",
+        "portfolio-h3": {
+                "1":"My Personal Website",
+                "2":"PopUp Login Form"
+        },
 
-    "footer-small": "Vladislav Pavlov. All Rights Reserved"
+        "portfolio-btn": {
+                "1":"Live Demo",
+                "2":"Load More",
+                "3":"All"
+        },
+
+        "contact-h2": "CONTACTS",
+        "contact-h5": {
+                "1":"Vladislav Pavlov",
+                "2":"+359887330448"
+        },  
+
+        "contact-btn": {
+                "1": "Send a Message",
+                "2": "Call me!",
+                "3": "Send Message"
+        },
+
+        "contact-placeholder": {
+                "1": "Your Full Name",
+                "2": "Your Email",
+                "3": "Your Message"
+        },
+
+        "footer-small": "Vladislav Pavlov. All Rights Reserved"
 }
