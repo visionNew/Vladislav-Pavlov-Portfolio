@@ -35,7 +35,6 @@ export const skillData= [
         {id: 4, icon:<FaReact/>, title: 'REACT.JS', desc: 'skills-desc.3', class:'skill__card slide-in-left'},
         {id: 5, icon:<FaVuejs/>, title: 'VUE.JS', desc: 'skills-desc.4', class:'skill__card blur'},
         {id: 6, icon:<SiTypescript/>, title: 'TYPESCRIPT', desc: 'skills-desc.4', class:'skill__card slide-in-right'},
-       
     ];
 
     //============== -4- PORTFOLIO DATA ==============
@@ -56,9 +55,8 @@ export const cardData= [
     
     //============== -5- CONTACT DATA ==============
 export const contactData= [
-        {id: 1, icon:<MdOutlineEmail className='contact__option-icon'/>, h4: 'Email', h5: 'contact-h5.1', link:'mailto: snowcho88@gmail.com', target:'_blank', link_name:'contact-btn.1', class:'contact__option slide-in-left'},
+        {id: 1, icon:<MdOutlineEmail className='contact__option-icon'/>, h4: 'Email', h5: 'contact-h5.1', link:'mailto: vlad.z.pavlov@gmail.com', target:'_blank', link_name:'contact-btn.1', class:'contact__option slide-in-left'},
         {id: 2, icon:<FaFacebookMessenger className='contact__option-icon'/>, h4: 'Messenger', h5: 'contact-h5.1', link:'http://m.me/vladislav.pavlov1', target:'_blank', link_name:'contact-btn.1', class:'contact__option slide-in-left'},
         {id: 3, icon:<FaViber className='contact__option-icon'/>, h4: 'Viber', h5: 'contact-h5.2', link:'viber://chat?number=+359887330448', target:'_blank', link_name:'contact-btn.1', class:'contact__option slide-in-right'},
         {id: 4, icon:<FaPhone className='contact__option-icon'/>, h4: 'Phone', h5: 'contact-h5.2', link:'tel:+359887330448', target:'_blank', link_name:'contact-btn.2', class:'contact__option slide-in-right'},
-       
     ];

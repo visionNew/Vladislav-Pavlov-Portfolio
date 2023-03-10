@@ -39,14 +39,14 @@ const About = () => {
               {/* ============== Start About Buttons ============== */}
                 <div className="about__btns blur">
                 {/* ============== Start About Buttons Download ============== */}
-                  <a href={CV} download className='btn'>{t('about-btn.1')} <FaDownload /></a>
+                  <a href={CV} download className='btn'><span>{t('about-btn.1')} <FaDownload /></span></a>
                 {/* ============== End About Buttons Download ============== */}
                 {/* ============== Start About Buttons Popup Certificate ============== */}
-                  <button onClick={togglePopup} className='btn'>{t('about-btn.2')} <AiOutlineSafetyCertificate className='btn-icon' /></button>  
+                  <button onClick={togglePopup} className='btn'><span>{t('about-btn.2')} <AiOutlineSafetyCertificate className='btn-icon' /></span></button>  
                 {/* ============== End About Buttons Popup Certificate ============== */}
                 </div>
               {/* ============== End About Buttons ============== */}
-             </div>
+            </div>
             {/* ============== Start About Popup Certificate ============== */}
               <div>
                 {

@@ -1,10 +1,10 @@
 {
     "nav":{
-            "1":"Home",
-            "2":"About",
-            "3":"Skills",
-            "4":"Portfolio",
-            "5":"Contacts"
+            "1":"HOME",
+            "2":"ABOUT",
+            "3":"SKILLS",
+            "4":"PORTFOLIO",
+            "5":"CONTACTS"
     },
 
     "hero-span": "HELLO",

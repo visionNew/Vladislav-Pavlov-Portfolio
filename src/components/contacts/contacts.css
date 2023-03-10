@@ -1,3 +1,7 @@
+/*=============== CONTACT SECTION STYLE ===============*/
+#contacts {
+    background-color: var(--color-gray);
+}
 /*=============== CONTACT CONTAINER STYLE ===============*/
 .contact__container {
     display: grid;
@@ -11,7 +15,7 @@
 }
 
 .contact__option {
-    background-color: var(--color-body);
+    background-color: var(--color-yellow);
     padding: 1rem;
     border-radius: 1rem;
     text-align: center;
@@ -20,13 +24,18 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* color: var(--color-white); */
+}
+
+.contact__option:nth-child(3), .contact__option:nth-child(4) {
+    background-color: var(--color-blue);
     color: var(--color-white);
 }
 
 .contact__option:hover {
-    background-color: transparent;
-    border-color: var(--color-text-variant);
-    color: var(--color-text-variant);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: var(--color-red);
+    color: var(--color-black);
     transform: var(--transform);
 }
 
@@ -38,6 +47,12 @@
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 1rem;
+}
+.contact__option:nth-child(3) a, .contact__option:nth-child(4) a {
+    color: var(--color-white);
+}
+.contact__option:hover a {
+    color: var(--color-black);
 }
 /*========== CONTACT FORM STYLE ==========*/
 form {
@@ -52,10 +67,15 @@ input, textarea{
     width: 60%;
     padding: 1.5rem;
     border-radius: .5rem;
-    background: transparent;
-    border: 2px solid var(--color-text-variant);
-    color:var(--color-white);
+    background: var(--color-white);
+    border: 2px solid var(--color-red);
+    color:var(--color-black);
     resize: none;
+}
+
+form .btn {
+    color: var(--color-black);
+    border: 1px solid var(--color-red);
 }
 /*=============== CONTACT MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
@@ -77,7 +97,7 @@ input, textarea{
 }
 
 @media screen and  (max-width: 600px) { 
-    .container.contact__container{
+    .container.contact__container {
         width: var(--container-width-sm);
         grid-template-columns: 1fr;
     }

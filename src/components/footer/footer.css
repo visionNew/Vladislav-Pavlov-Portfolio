@@ -2,6 +2,7 @@
 footer {
     padding: 3rem 0;
     text-align: center;
+    color: var(--color-black);
     font-size: var(--small-font-size);
     display: flex;
     flex-direction: column;

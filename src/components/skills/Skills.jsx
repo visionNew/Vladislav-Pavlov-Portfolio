@@ -14,9 +14,9 @@ const Skills = () => {
           { // SKILL DATA MAP
             skillData.map(item =>
               <div key={item.id} className={item.class}>
-                 <span className="card__icon">{item.icon}</span>
-                 <h5>{item.title}</h5>
-                 <small>{t(item.desc)}</small>
+                <span className="card__icon">{item.icon}</span>
+                <h5>{item.title}</h5>
+                <small>{t(item.desc)}</small>
               </div>)
           }
         </div>

@@ -46,7 +46,7 @@ const Portfolio = () => {
         {/* ============== Start Portfolio Filter Buttons ============== */}
           <div className="filter__btn blur">
               {
-                buttons.map((item, i)=> <button key={`button-${i}`} className="btn" onClick={()=>{filter(item)}}>{item}</button>)
+                buttons.map((item, i)=> <button key={`button-${i}`} className="btn" onClick={()=>{filter(item)}}><span>{item}</span></button>)
               }
           </div>
         {/* ============== End Portfolio Filter Buttons ============== */}
@@ -61,16 +61,16 @@ const Portfolio = () => {
                                   <h3>{t(item.title)}</h3> {/* ============== Card H3 ============== */}
                                 {/* ============== Start Card Buttons ============== */}
                                   <div className="portfolio__item-links">
-                                      <a href={item.link_git} className="btn" target={item.target}>GitHub</a>
-                                      <a href={item.link_dribb} className="btn" target={item.target}>{t('portfolio-btn.1')}</a> 
+                                      <a href={item.link_git} className="btn" target={item.target}><span>GitHub</span></a>
+                                      <a href={item.link_dribb} className="btn" target={item.target}><span>{t('portfolio-btn.1')}</span></a> 
                                   </div>
                                 {/* ============== End Card Buttons ============== */}
-                             </article>)
+                                </article>)
           }
           </div>
         {/* ============== End Portfolio Card ============== */}
           {/* ============== Start Load More Button ============== */}
-            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load">{t('portfolio-btn.2')}</button>}
+            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load"><span>{t('portfolio-btn.2')}</span></button>}
           {/* ============== End Load More Button ============== */}
         </div>
       {/* ============== Start Portfolio Section ============== */}

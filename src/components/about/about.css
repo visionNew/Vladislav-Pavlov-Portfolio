@@ -8,8 +8,8 @@
 .about__portrait {
     height: fit-content;
     min-height: 40rem;
-    border: 1rem solid var(--color-item);
-    background-color: var(--color-item-variant);
+    border: 1rem solid var(--color-blue);
+    background-color: var(--color-yellow);
     transition: var(--transition);
     border-radius: var(--border-radius-2);
 }
@@ -31,6 +31,17 @@
     display: flex;
     gap: 1.5rem;
     margin-top: 2.5rem;
+}
+
+.about__btns .btn {
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.about__btns > .btn span {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .btn-icon {
@@ -56,9 +67,9 @@
 }
 
 .popup__body > img {
-    width: 70%;
+    width: 69%;
     border-radius: var(--border-radius-2);
-    border: 1rem solid var(--color-item);
+    border: .4rem solid var(--color-blue);
 }
 /*=============== ABOUT MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
@@ -82,9 +93,9 @@
         left: 23%;
         right: 23%;
     }
-  }
-  
-  @media screen and  (max-width: 600px) { 
+}
+
+@media screen and  (max-width: 600px) { 
 
     .about__btns {
         flex-direction: column;

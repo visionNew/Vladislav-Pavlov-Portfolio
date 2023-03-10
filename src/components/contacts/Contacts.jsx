@@ -39,7 +39,7 @@ const Contacts = () => {
             <button onClick={(event) => { 
               event.preventDefault() 
               sendEmail(name, email, message) }} 
-              className="btn">{t('contact-btn.3')}</button>
+              className="btn"><span>{t('contact-btn.3')}</span></button>
           {/* ============== End Button Send Form ============== */}
           </form>
       {/* ============== End StartContact Form ============== */}

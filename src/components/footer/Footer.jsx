@@ -17,7 +17,7 @@ const Footer = () => {
       {/* ============== Start Social Buttons ============== */}
         <div className="btn__socials blur">
           {// SOCIAL DATA MAP
-            socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">{item.icon}</a>) 
+            socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className='btn__social'><span>{item.icon}</span></a>) 
           }
         </div>
       {/* ============== End Social Buttons ============== */}

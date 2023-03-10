@@ -11,6 +11,7 @@ import USA from '../../assets/usa.png'; // IMAGE USA FLAG FILE
 const Header = () => {
   const [selected, setSelected] = useState(""); // FUNCTION FOR SELECTED
   const [isActive, setIsActive] = useState(false); // FUNCTION FOR ACTIVE
+  const [scroll, setScroll] = useState(false); // FUNCTION FOR SCROLL
 // START FUNCTION TRANSLATION PAGE
   const { t } = useTranslation(); 
   const { i18n } = useTranslation();
@@ -19,6 +20,8 @@ const Header = () => {
 // START FUNCTION ANIMATION LOAD
   useEffect(() => {
     const handleScroll = () => {
+      const isScrolling = window.scrollY > 0;
+      setScroll(isScrolling);
       const H2Tags = document.querySelectorAll('h2');
       H2Tags.forEach((h2Tag) => {
         const rect = h2Tag.getBoundingClientRect();
@@ -70,7 +73,7 @@ const Header = () => {
   return (
     <section id="header">
     {/* ============== Start Header ============== */}
-      <nav ref={elementRef} id="navbar">
+      <nav ref={elementRef} id="navbar" className={scroll ? 'scrolled' : 'bg-yellow'}>
       {/* ============== Start NavBar ============== */}
         <div className="container nav__container">
         {/* ============== Start NavBar logo ============== */}
@@ -91,11 +94,11 @@ const Header = () => {
           <Dropdown selected={selected} setSelected={setSelected} />
         {/* ============== End Dropdown Menu File ============== */}
         {/* ============== Start Translation Buttons ============== */}
-          <div className="translate">
+          <div className="translate ">
             <button id='item__icon' className="btn" onClick={(e) => setIsActive(!isActive)}><FaLanguage /></button>
             { // FUNCTION FOR ACTIVE
               isActive && (
-                <div className="translate__options">
+                <div className={scroll ? 'translate__options scrolled' : 'bg-yellow translate__options '}>
                     <button className="translate__item" setSelected={setSelected} onClick={(e) => { setIsActive(false); handleClick('en');}}><img src={USA} alt="Flag USA" />EN</button>
                     <button className="translate__item" setSelected={setSelected} onClick={(e) => { setIsActive(false); handleClick('bg');}}><img src={BGN} alt="Flag BG" />BG</button>
                 </div>)

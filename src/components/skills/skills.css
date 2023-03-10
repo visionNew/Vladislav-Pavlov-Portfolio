@@ -1,3 +1,7 @@
+/*=============== SKILLS SECTION STYLE ===============*/
+#skills{
+    background-color: var(--color-gray);
+}
 /*=============== SKILLS CONTAINER STYLE ===============*/
 .skills__container {
     display: grid;
@@ -6,8 +10,8 @@
 }
 /*=============== SKILLS CARDS STYLE ===============*/
 .skill__card {
-    background-color: var(--color-body);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-black);
     padding: 1.3rem;
     border-radius: var(--border-radius-2);
     border: 1px solid transparent;
@@ -18,9 +22,9 @@
 }
 
 .skill__card:hover {
-    background-color: transparent;
-    border-color: var(--color-text-variant);
-    color: var(--color-text-variant);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: var(--color-blue);
+    color: var(--color-blue);
     transform: var(--transform);
 }
 
@@ -54,5 +58,4 @@
     .skill__card h5 {
         font-size: 1.2rem;
     }
-    
-  }
+}
