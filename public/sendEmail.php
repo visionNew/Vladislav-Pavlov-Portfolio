@@ -8,7 +8,7 @@
     $headers =  "From: " . $to . ";\r\n".
                 "Reply-To: ". $to . ";\r\n".
                 "Content-Type: text/html; charset=utf-8;\r\n".
-                "Content-Tranfer-Encoding: 8bit;";
+                "Content-Transfer-Encoding: 8bit;";
 
     mail($to, $subject, $message, $headers);
 ?>
