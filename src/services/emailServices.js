@@ -1,20 +1,20 @@
 export const sendEmail = async (name, email, message) => {
 
-        const encodedName = encodeURIComponent(name);
-        const encodedEmail = encodeURIComponent(email);
-        const encodedMessage = encodeURIComponent(message);
-    await fetch('./sendEmail.php', {
+        const encodedName = (name);
+        const encodedEmail = (email);
+        const encodedMessage = (message);
+    await fetch('/sendEmail.php', {
         
         method: 'POST',
         mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(
+        body:
             {   name: encodedName, 
                 email: encodedEmail, 
                 message: encodedMessage }
-        )
+        
     })
         .then(response => response.json())
         .then(data => {
