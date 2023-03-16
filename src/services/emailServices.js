@@ -7,11 +7,11 @@ export const sendEmail = async (name, email, message) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body:
+        body: JSON.stringify(
             {   name , 
                 email, 
                 message }
-        
+        )
     })
         .then()
         .then(data => {
