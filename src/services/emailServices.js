@@ -1,8 +1,5 @@
 export const sendEmail = async (name, email, message) => {
 
-        const encodedName = (name);
-        const encodedEmail = (email);
-        const encodedMessage = (message);
     await fetch('/sendEmail.php', {
         
         method: 'POST',
@@ -11,9 +8,9 @@ export const sendEmail = async (name, email, message) => {
             'Content-Type': 'application/json'
         },
         body:
-            {   name: encodedName, 
-                email: encodedEmail, 
-                message: encodedMessage }
+            {   name , 
+                email, 
+                message }
         
     })
         .then(response => response.json())
