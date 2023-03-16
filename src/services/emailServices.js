@@ -13,11 +13,11 @@ export const sendEmail = async (name, email, message) => {
                 message }
         
     })
-        .then(response => response.json())
+        .then()
         .then(data => {
-            console.log('Success:', data);
+            console.log('Success:');
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error:');
         });
     };

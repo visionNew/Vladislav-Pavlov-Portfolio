@@ -5,11 +5,10 @@
                 '<p>Email: '.htmlentities($_POST['email']).'</p>'.
                 '<p>Message: '.htmlentities($_POST['message']).'</p>';
 
-    $headers =  "From: " . $email . "\r\n".
-                "Reply-To: ". $email . "\r\n".
-                "Content-Type: text/html; charset=ISO-8859-1\r\n".
-                "MIME-Version: 1.0\r\n".
-                'X-Mailer: PHP/'.phpversion();
+    $headers =  "From: " . $to . ";\r\n".
+                "Reply-To: ". $to . ";\r\n".
+                "Content-Type: text/html; charset=uts-8;\r\n".
+                "Content-Tranfer-Encoding: 8bit;";
 
     mail($to, $subject, $message, $headers);
 ?>
