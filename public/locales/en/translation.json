@@ -81,5 +81,10 @@
             "3": "Your Message"
     },
 
+    "contact-form-p": {
+            "1": "Message Sent Successfully!",
+            "2": "Error Sending Message!"
+    },
+
     "footer-small": "Vladislav Pavlov. All Rights Reserved"
 }

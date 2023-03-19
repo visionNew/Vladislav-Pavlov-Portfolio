@@ -20,11 +20,15 @@ const handleSubmit = async (e) => {
       'Content-Type': 'application/json'
     }
   });
+
   const data = await response.json();
   if (data.status === 'success') {
-    setStatus('Message sent successfully!');
+    setStatus('contact-form-p.1', 'success');
+    setName('');
+    setEmail('');
+    setMessage('');
   } else {
-    setStatus('Error sending message.');
+    setStatus('contact-form-p.2', 'error');
   }
 };
   return (
@@ -52,9 +56,11 @@ const handleSubmit = async (e) => {
             <input value={email} type="email"  name="email" placeholder={t('contact-placeholder.2')} onChange={({target}) => setEmail(target.value)} required/>
             <textarea value={message} name="message" rows="7" placeholder={t('contact-placeholder.3')} onChange={({target}) => setMessage(target.value)} required></textarea>
           {/* ============== Start Button Send Form ============== */}
-            <button className="btn"><span>{t('contact-btn.3')}</span></button>
+            <div>
+              <button className="btn"><span>{t('contact-btn.3')}</span></button>
 
-            <p>{status}</p>
+              {status && <p id='status' className={status === 'contact-form-p.1' ? 'success' : 'error'}>{t(status)}</p>}
+            </div>
           {/* ============== End Button Send Form ============== */}
           </form>
       {/* ============== End StartContact Form ============== */}

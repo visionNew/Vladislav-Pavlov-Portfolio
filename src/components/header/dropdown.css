@@ -50,6 +50,9 @@
     border-bottom: 1px solid var(--color-blue);
     transition: var(--transition);
 }
+.dropdown  .bg-yellow {
+    height: auto;
+}
 /*=============== DROPDOWN MEDIA QUERY STYLE ===============*/
 @media screen and  (max-width: 600px) { 
     .dropdown {
