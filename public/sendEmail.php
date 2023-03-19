@@ -1,14 +1,27 @@
 <?php
-    $to = 'vlad.z.pavlov@gmail.com';
-    $subject = 'Message Recieved';
-    $message =  '<h3>Name: '.htmlentities($_POST['name']).'</h3>'.
-                '<p>Email: '.htmlentities($_POST['email']).'</p>'.
-                '<p>Message: '.htmlentities($_POST['message']).'</p>';
+    header('Content-Type: application/json');
 
-    $headers =  "From: " . $to . ";\r\n".
-                "Reply-To: ". $to . ";\r\n".
-                "Content-Type: text/html; charset=utf-8;\r\n".
-                "Content-Transfer-Encoding: 8bit;";
+    $data = json_decode(file_get_contents('php://input'), true);
 
-    mail($to, $subject, $message, $headers);
+    if (isset($data['name']) && !empty($data['name']) &&
+        isset($data['email']) && !empty($data['email']) &&
+        isset($data['message']) && !empty($data['message']) &&
+        filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+
+        $to = "vlad.z.pavlov@gmail.com";
+        $subject = $data['name'];
+        $message = $data['message'];
+        $headers = "From: " . $data['email']; 
+
+
+        if (mail($to, $subject, $message, $headers)) {
+        $response = array('status' => 'success');
+        } else {
+        $response = array('status' => 'error');
+        }
+    } else {
+        $response = array('status' => 'error');
+    }
+
+    echo json_encode($response);
 ?>
