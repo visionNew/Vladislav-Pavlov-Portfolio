@@ -19,7 +19,7 @@ const About = () => {
       {/* ============== Start About Section ============== */}
         <div className="container about__container">
           {/* ============== Start About Left Info ============== */}
-            <div className="about__left slide-in-left">
+            <div className="about__left animation-left">
             {/* ============== Start About Image ============== */}
               <div className="about__portrait">
                 <img src={IMGAbout} alt="About Persona" />
@@ -28,7 +28,7 @@ const About = () => {
             </div>
           {/* ============== End About Left Info ============== */}
           {/* ============== Start About Right Info ============== */}
-            <div className="about__right slide-in-right">
+            <div className="about__right animation-right">
               <h2>{t('about-h2')}</h2> {/* ============== About H2 ============== */}
                 <p>
                   {t('about-p.1')}{/* ============== About Paragraph Info ============== */}
@@ -37,7 +37,7 @@ const About = () => {
                   {t('about-p.2')} {/* ============== About Paragraph Info ============== */}
                 </p>
               {/* ============== Start About Buttons ============== */}
-                <div className="about__btns blur">
+                <div className="about__btns animation-center">
                 {/* ============== Start About Buttons Download ============== */}
                   <a href={CV} download className='btn'><span>{t('about-btn.1')} <FaDownload /></span></a>
                 {/* ============== End About Buttons Download ============== */}
@@ -51,7 +51,7 @@ const About = () => {
               <div>
                 {
                   isOpen && <div onClick = {closePopup} className="popup__container">
-                                <div className= "popup__body scale-in-center" >
+                                <div className= "popup__body scale-up-center" >
                                     <img src={IMGCert} alt="Certificate" />
                                 </div>
                             </div>

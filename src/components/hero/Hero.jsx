@@ -16,7 +16,7 @@ const Hero = () => {
             <h1>{t('hero-h1.1')} <span>{t('hero-h1.2')}</span> {t('hero-h1.3')}</h1> {/* ============== Hero H1 Name ============== */}
             <p>{t('hero-p')}</p> {/* ============== Hero Paragraph Info ============== */}
           {/* ============== Start Hero Buttons  ============== */}
-            <div className="hero__btn blur">
+            <div className="hero__btn text-focus-in">
               <a href="#contacts" className="btn"><span>{t('hero-btn.1')}</span></a>
               <a href="#portfolio" className="btn"><span>{t('hero-btn.2')}</span></a>
             </div>
@@ -24,14 +24,14 @@ const Hero = () => {
           </div>
         {/* ============== End Hero Left Info ============== */}
           {/* ============== Start Social Buttons ============== */}
-            <div className="btn__socials blur">
+            <div className="btn__socials text-focus-in">
               { // SOCIAL DATA MAP
                 socialData.map(item => <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className='btn__social'><span>{item.icon}</span></a>) 
               } 
             </div>
           {/* ============== End Social Buttons ============== */}
         {/* ============== Start Hero Right Info ============== */}
-          <img src={ImgPerson} alt="hero Person" className="blur" />
+          <img src={ImgPerson} alt="hero Person" className="slide-in-right" />
         {/* ============== End Hero Right Info ============== */}
         </div>
       {/* ============== End Hero Section ============== */}

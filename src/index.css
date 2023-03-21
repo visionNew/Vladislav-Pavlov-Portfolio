@@ -58,6 +58,7 @@
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+    --container-width-sm-d: 92%;
 
     /*========== border radius ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -103,6 +104,7 @@ body {
   background-color: var(--color-body);
   color: var(--color-black);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1,
@@ -161,6 +163,7 @@ section {
   padding: 10rem 0;
   transition: var(--transition);
   z-index: var(--z-tooltip);
+  overflow-x: hidden;
 }
 section > h2 {
   text-align: center;
@@ -359,13 +362,18 @@ body::-webkit-scrollbar-thumb {
     width: var(--container-width-md);
   }
   
+}
+@media screen and  (max-width: 768px) { 
+  .container {
+    width: var(--container-width-sm);
+  }
   body::-webkit-scrollbar {
     display: none;
   }
 }
 @media screen and  (max-width: 600px) { 
   .container {
-    width: var(--container-width-sm);
+    width: var(--container-width-sm-d);
   }
   section {
     margin-top: 2rem;

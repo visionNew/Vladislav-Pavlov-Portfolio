@@ -31,34 +31,38 @@ const Header = () => {
           h2Tag.classList.remove('tracking-in-expand-fwd');
         }
       });
+      
+      const elementsL = document.querySelectorAll(".animation-left");
+      elementsL.forEach((element) => {
+        const elementLeft = element.getBoundingClientRect();
+        if (elementLeft.top >= -50 && elementLeft.bottom <= window.innerHeight) {
+          element.classList.add("slide-in-left");
+        }
+      });
+
+      const elementsR = document.querySelectorAll(".animation-right");
+      elementsR.forEach((element) => {
+        const elementRight = element.getBoundingClientRect();
+        if (elementRight.top >= -50 && elementRight.bottom <= window.innerHeight) {
+          element.classList.add("slide-in-right");
+        }
+      });
+
+      const elementsC = document.querySelectorAll(".animation-center");
+      elementsC.forEach((element) => {
+        const elementCenter = element.getBoundingClientRect();
+        if (elementCenter.top >= -50 && elementCenter.bottom <= window.innerHeight) {
+          element.classList.add("text-focus-in");
+        }
+      });
     };
+  
+
     window.addEventListener('scroll', handleScroll);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) { 
-          entry.target.classList.add('show');
-        } 
-      })
-    })
-
-    const hiddenBlur = document.querySelectorAll('.blur');
-    hiddenBlur.forEach((el) => observer.observe(el));
-    
-    const slideRight = document.querySelectorAll('.slide-in-right');
-    slideRight.forEach((el) => observer.observe(el));
-    
-    const slideRight2 = document.querySelectorAll('.slide-in-right-2');
-    slideRight2.forEach((el) => observer.observe(el));
-
-    const slideLeft = document.querySelectorAll('.slide-in-left');
-    slideLeft.forEach((el) => observer.observe(el));
   }, []);
 // END FUNCTION ANIMATION LOAD
 // START FUNCTION NAVBAR ANIMATION

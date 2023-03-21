@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
         </div>
       {/* ============== End Contact Options ============== */}
       {/* ============== Start Contact Form ============== */}
-        <form className='blur' onSubmit={handleSubmit}>
+        <form className='animation-center' onSubmit={handleSubmit}>
             <input value={name} name="name" placeholder={t('contact-placeholder.1')} onChange={({target}) => setName(target.value)} required/>
             <input value={email} type="email"  name="email" placeholder={t('contact-placeholder.2')} onChange={({target}) => setEmail(target.value)} required/>
             <textarea value={message} name="message" rows="7" placeholder={t('contact-placeholder.3')} onChange={({target}) => setMessage(target.value)} required></textarea>

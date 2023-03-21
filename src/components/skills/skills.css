@@ -43,7 +43,7 @@
     margin-bottom: 1.5rem;
 }
 /*=============== SKILLS MEDIA QUERY STYLE ===============*/
-@media screen and  (max-width: 600px) { 
+@media screen and  (max-width: 768px) { 
     .skills__container {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;

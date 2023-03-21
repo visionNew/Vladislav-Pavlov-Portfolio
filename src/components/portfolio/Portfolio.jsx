@@ -44,15 +44,15 @@ const Portfolio = () => {
         <div className="container portfolio__container">
         {/* ============== Start Portfolio Card ============== */}
         {/* ============== Start Portfolio Filter Buttons ============== */}
-          <div className="filter__btn blur">
+          <div className="filter__btn animation-center">
               {
                 buttons.map((item, i)=> <button key={`button-${i}`} className="btn" onClick={()=>{filter(item)}}><span>{item}</span></button>)
               }
           </div>
         {/* ============== End Portfolio Filter Buttons ============== */}
-          <div className="portfolio__cards blur">
+          <div className="portfolio__cards">
             { // PORTFOLIO CARD DATA MAP
-              slice.map(item => <article className="portfolio__item scale-in-center" key={item.id}>
+              slice.map(item => <article className="portfolio__item scale-up-center" key={item.id}>
                                 {/* ============== Start Card Image ============== */} 
                                   <div className="portfolio__item-image">
                                     <img src={require('../../assets/project/' + item.img_name + '.png')} alt="Project Img" />
@@ -70,7 +70,7 @@ const Portfolio = () => {
           </div>
         {/* ============== End Portfolio Card ============== */}
           {/* ============== Start Load More Button ============== */}
-            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load"><span>{t('portfolio-btn.2')}</span></button>}
+            {showMore && <button ref={portfolioRef} onClick={loadMore} className="btn btn-load animation-center"><span>{t('portfolio-btn.2')}</span></button>}
           {/* ============== End Load More Button ============== */}
         </div>
       {/* ============== Start Portfolio Section ============== */}

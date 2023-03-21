@@ -107,18 +107,15 @@ nav {
     transition: var(--transition);
     transform: none;
 }
-/*=============== HERO MEDIA QUERY STYLE ===============*/
+/*===============  MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
     .nav__menu {
         gap: 0;
     }
 }
-/*=============== NAVBAR MEDIA QUERY STYLE ===============*/
-@media screen and  (max-width: 600px) { 
+
+@media screen and  (max-width: 768px) { 
     .nav__menu{
         display: none;
-    }
-    .dropdown {
-        display: block;
     }
 }

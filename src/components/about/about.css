@@ -2,7 +2,7 @@
 .about__container {
     display: grid;
     grid-template-columns: 35% 53%;
-    gap: 12%;
+    gap: 10rem;
 }
 /*=============== ABOUT IMAGE STYLE ===============*/
 .about__portrait {
@@ -74,16 +74,17 @@
 /*=============== ABOUT MEDIA QUERY STYLE ===============*/
 @media screen and (max-width: 1024px) {
     .about__left{
-        display: none;
+        display: block;
+    }
+
+    .about__portrait {
+        min-height: 20rem;
     }
 
     .about__container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 45% 53%;
+        gap: 2rem;
         padding-bottom: 2.6rem;
-    }
-
-    .about__container h2 {
-        text-align: center;
     }
 
     .popup__body > img {
@@ -95,18 +96,29 @@
     }
 }
 
-@media screen and  (max-width: 600px) { 
+@media screen and (max-width: 768px) {
+    .about__left {
+        display: none;
+    }
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+    .about__right h2 {
+        text-align: center;
+    }
+    .popup__body {
+        top: 1%;
+        left: 5%;
+        right: 5%;
+    }
+}
 
+@media screen and  (max-width: 600px) {
     .about__btns {
         flex-direction: column;
         align-items: center;
         gap: 2.5rem;
     }
-
-    .popup__body > img {
-        border: none;
-    }
-
     .popup__body {
         top: 1%;
         left: 4%;
