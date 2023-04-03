@@ -62,7 +62,7 @@ const Portfolio = () => {
                                 {/* ============== Start Card Buttons ============== */}
                                   <div className="portfolio__item-links">
                                       <a href={item.link_git} className="btn" target={item.target}><span>GitHub</span></a>
-                                      <a href={item.link_dribb} className="btn" target={item.target}><span>{t('portfolio-btn.1')}</span></a> 
+                                      <a href={item.link_vercel} className="btn" target={item.target}><span>{t('portfolio-btn.1')}</span></a> 
                                   </div>
                                 {/* ============== End Card Buttons ============== */}
                                 </article>)

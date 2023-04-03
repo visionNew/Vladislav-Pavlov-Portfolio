@@ -39,18 +39,18 @@ export const skillData= [
 
     //============== -4- PORTFOLIO DATA ==============
 export const cardData= [
-        {id: 1, title:'portfolio-h3.1', category:'React JS', img_name:'project-1', target:'_blank', link_git:'https://github.com/visionNew/Vladislav-Pavlov-Portfolio', link_dribb:'#index.html'},
-        {id: 2, title:'portfolio-h3.3', category:'Vanilla JS',  img_name:'project-2', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-1', link_dribb:'https://dribbble.com/shots/20404584-COCO-Services-V1'},
-        {id: 3, title:'portfolio-h3.4', category:'Vanilla JS',  img_name:'project-3', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-2', link_dribb:'https://dribbble.com/shots/20405827-COCO-Services-V2'},
-        {id: 4, title:'portfolio-h3.5', category:'Vanilla JS',  img_name:'project-4', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-3', link_dribb:'https://dribbble.com/shots/20405835-COCO-Services-V3'},
-        {id: 5, title:'portfolio-h3.6', category:'Vanilla JS',  img_name:'project-5', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-4', link_dribb:'https://dribbble.com/shots/20405946-COCO-Services-V4'},
-        {id: 6, title:'portfolio-h3.7', category:'Vanilla JS', img_name:'project-6', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-5', link_dribb:'https://dribbble.com/shots/20407084-COCO-Services-V5'},
-        {id: 7, title:'portfolio-h3.8', category:'Vanilla JS', img_name:'project-7', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-1', link_dribb:'https://dribbble.com/shots/20426337-COCO-Studios-V1'},
-        {id: 8, title:'portfolio-h3.9', category:'Vanilla JS', img_name:'project-8', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-2', link_dribb:'https://dribbble.com/shots/20426807-COCO-Sudios-V2'},
-        {id: 9, title:'portfolio-h3.10', category:'Vanilla JS', img_name:'project-9', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-3', link_dribb:'https://dribbble.com/shots/20426853-COCO-Sudios-V3'},
-        {id: 10, title:'portfolio-h3.11', category:'Vanilla JS', img_name:'project-10', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-4', link_dribb:'https://dribbble.com/shots/20426864-COCO-Sudios-V4'},
-        {id: 11, title:'portfolio-h3.12', category:'Vanilla JS', img_name:'project-11', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-5', link_dribb:'https://dribbble.com/shots/20426875-COCO-Sudios-V5'},
-        {id: 12, title:'portfolio-h3.2', category:'React JS', img_name:'project-12', target:'_blank', link_git:'https://github.com/visionNew/login-registration-form', link_dribb:'https://dribbble.com/shots/20764603-PopUp-Login-Form'},
+        {id: 1, title:'portfolio-h3.1', category:'React JS', img_name:'project-1', target:'_blank', link_git:'https://github.com/visionNew/Vladislav-Pavlov-Portfolio', link_vercel:'#index.html'},
+        {id: 2, title:'portfolio-h3.3', category:'Vanilla JS',  img_name:'project-2', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-1', link_vercel:'https://coco-host-version-1.vercel.app/'},
+        {id: 3, title:'portfolio-h3.4', category:'Vanilla JS',  img_name:'project-3', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-2', link_vercel:'https://coco-host-version-2.vercel.app/'},
+        {id: 4, title:'portfolio-h3.5', category:'Vanilla JS',  img_name:'project-4', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-3', link_vercel:'https://coco-host-version-3.vercel.app/'},
+        {id: 5, title:'portfolio-h3.6', category:'Vanilla JS',  img_name:'project-5', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-4', link_vercel:'https://coco-host-version-4.vercel.app/'},
+        {id: 6, title:'portfolio-h3.7', category:'Vanilla JS', img_name:'project-6', target:'_blank', link_git:'https://github.com/visionNew/COCO-host-version-5', link_vercel:'https://coco-host-version-5.vercel.app/'},
+        {id: 7, title:'portfolio-h3.8', category:'Vanilla JS', img_name:'project-7', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-1', link_vercel:'https://coco-studios-version-1.vercel.app/'},
+        {id: 8, title:'portfolio-h3.9', category:'Vanilla JS', img_name:'project-8', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-2', link_vercel:'https://coco-studios-version-2.vercel.app/'},
+        {id: 9, title:'portfolio-h3.10', category:'Vanilla JS', img_name:'project-9', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-3', link_vercel:'https://coco-studios-version-3.vercel.app/'},
+        {id: 10, title:'portfolio-h3.11', category:'Vanilla JS', img_name:'project-10', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-4', link_vercel:'https://coco-studios-version-4.vercel.app/'},
+        {id: 11, title:'portfolio-h3.12', category:'Vanilla JS', img_name:'project-11', target:'_blank', link_git:'https://github.com/visionNew/COCO-studios-version-5', link_vercel:'https://coco-studios-version-5.vercel.app/'},
+        {id: 12, title:'portfolio-h3.2', category:'React JS', img_name:'project-12', target:'_blank', link_git:'https://github.com/visionNew/login-registration-form', link_vercel:'https://login-registration-form-five.vercel.app/'},
     ];
     
     //============== -5- CONTACT DATA ==============
