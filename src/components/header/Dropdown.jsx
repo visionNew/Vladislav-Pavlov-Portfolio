@@ -1,12 +1,13 @@
 import './dropdown.css'; // CSS FILE FOR COMPONENT
 import { navData } from '../../utils/data'; // DATA FILE FOR COMPONENT
-import { useState, useEffect } from "react"; // REACT HOOKS
+import { useState, useEffect, useRef } from "react"; // REACT HOOKS
 import { useTranslation } from 'react-i18next'; // TRANSLATION FILE
 
 function Dropdown ({ selected, setSelected }) {
     const { t } = useTranslation(); // FUNCTION TRANSLATION PAGE
     const [isActive, setIsActive] = useState(false); // FUNCTION FOR ACTIVE
     const [scroll, setScroll] = useState(false); // FUNCTION FOR SCROLL
+    const dropdownRef = useRef(null); // FUNCTION FOR CLOSING MENU
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,14 +15,21 @@ function Dropdown ({ selected, setSelected }) {
         setScroll(isScrolling);
     };
     window.addEventListener('scroll', handleScroll);
+    document.addEventListener("click", handleClickOutside);
 
     return () => {
     window.removeEventListener('scroll', handleScroll);
+    document.removeEventListener("click", handleClickOutside);
     };
 }, []);
+    const handleClickOutside = (e) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsActive(false);
+        }
+    };
     
     return (
-            <div className="dropdown">
+            <div ref={dropdownRef} className="dropdown">
             {/* ============== Start Dropdown Menu ============== */}
             {/* ============== Start Dropdown Button ============== */}
                 <div className="dropdown__btn" onClick={(e) => {setIsActive(!isActive)}} >
