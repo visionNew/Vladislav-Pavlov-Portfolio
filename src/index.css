@@ -376,6 +376,6 @@ body::-webkit-scrollbar-thumb {
     width: var(--container-width-sm-d);
   }
   section {
-    margin-top: 2rem;
+    margin-top: 0;
   }
 }
